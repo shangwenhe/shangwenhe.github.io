@@ -56,7 +56,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://shangwenhe.github.io/
+      url: https://shangwenhe.github.io
     needs: build
     runs-on: ubuntu-latest
     name: Deploy
