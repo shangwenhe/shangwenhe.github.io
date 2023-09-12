@@ -280,13 +280,13 @@ Chrome 计划将`Lax`变为默认设置。这时，网站可以选择显式关�
 
 下面的设置无效。
 
-```text
+```txt
 Set-Cookie: widget_session=abc123; SameSite=None
 ```
 
 下面的设置有效。
 
-```text
+```txt
 Set-Cookie: widget_session=abc123; SameSite=None; Secure
 ```
 

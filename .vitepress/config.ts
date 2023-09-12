@@ -33,7 +33,7 @@ const sidebar = {
 }
 
 
-const srcExclude = [ 'es6/**']
+const srcExclude = [ 'h/*']
 
 export default {
   // app level config options
