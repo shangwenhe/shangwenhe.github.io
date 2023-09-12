@@ -11,7 +11,12 @@ const nav = [
   { text: 'TypeScript', link: '/ts/intro.html' },
   { text: 'JavaScript', link: '/js/basic/introduction.html' },
   { text: 'ES6', link: '/es6/intro.html' },
-  { text: '资料来源', link: 'https://github.com/wangdoc' },
+  {
+    text: '相关资料',
+    link: 'https://github.com/wangdoc',
+    target: '_blank',
+    rel: 'wangdoc'
+  }
 ];
 
 const sidebar = {
