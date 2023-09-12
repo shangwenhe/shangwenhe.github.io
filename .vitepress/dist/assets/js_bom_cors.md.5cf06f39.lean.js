@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as o}from"./chunks/framework.b2e9bf53.js";const C=JSON.parse('{"title":"CORS 通信","description":"","frontmatter":{},"headers":[],"relativePath":"js/bom/cors.md","filePath":"js/bom/cors.md"}'),l={name:"js/bom/cors.md"},p=o("",86),e=[p];function c(t,r,i,y,E,d){return a(),n("div",null,e)}const F=s(l,[["render",c]]);export{C as __pageData,F as default};

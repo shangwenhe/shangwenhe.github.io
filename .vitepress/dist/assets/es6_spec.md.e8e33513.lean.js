@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as o,Q as e}from"./chunks/framework.b2e9bf53.js";const h=JSON.parse('{"title":"读懂 ECMAScript 规格","description":"","frontmatter":{},"headers":[],"relativePath":"es6/spec.md","filePath":"es6/spec.md"}'),n={name:"es6/spec.md"},l=e("",85),p=[l];function c(t,r,d,y,i,E){return a(),o("div",null,p)}const b=s(n,[["render",c]]);export{h as __pageData,b as default};

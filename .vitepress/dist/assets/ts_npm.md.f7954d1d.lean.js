@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as o}from"./chunks/framework.b2e9bf53.js";const q=JSON.parse('{"title":"TypeScript 项目使用 npm 模块","description":"","frontmatter":{},"headers":[],"relativePath":"ts/npm.md","filePath":"ts/npm.md"}'),p={name:"ts/npm.md"},l=o("",23),t=[l];function e(c,r,E,y,i,u){return a(),n("div",null,t)}const F=s(p,[["render",e]]);export{q as __pageData,F as default};

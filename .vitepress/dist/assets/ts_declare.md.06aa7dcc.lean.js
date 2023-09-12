@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.b2e9bf53.js";const u=JSON.parse('{"title":"declare 关键字","description":"","frontmatter":{},"headers":[],"relativePath":"ts/declare.md","filePath":"ts/declare.md"}'),p={name:"ts/declare.md"},o=l("",87),e=[o];function c(t,r,y,E,i,d){return n(),a("div",null,e)}const A=s(p,[["render",c]]);export{u as __pageData,A as default};
