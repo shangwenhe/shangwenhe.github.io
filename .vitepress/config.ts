@@ -33,7 +33,7 @@ const sidebar = {
 }
 
 
-const srcExclude = [ 'typescript-tutorial/**']
+const srcExclude = [ 'es6/**']
 
 export default {
   // app level config options
