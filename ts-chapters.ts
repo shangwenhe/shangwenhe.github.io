@@ -1,20 +1,15 @@
 
 export const chaters = [
+
   { text: '简介', link: '/ts/intro.html' },
-  {
-    text: '基本语法',
-    collapsed: false,
-    items: [
-      { text: '基本用法', link: '/ts/basic.html' },
-      { text: 'any 类型', link: '/ts/any.html' },
-      { text: '类型系统', link: '/ts/types.html' },
-      { text: '数组', link: '/ts/array.html' },
-      { text: '元组', link: '/ts/tuple.html' },
-      { text: 'symbol 类型', link: '/ts/symbol.html' },
-      { text: '函数', link: '/ts/function.html' },
-      { text: '对象', link: '/ts/object.html' },
-    ]
-  },
+  { text: '基本用法', link: '/ts/basic.html' },
+  { text: 'any 类型', link: '/ts/any.html' },
+  { text: '类型系统', link: '/ts/types.html' },
+  { text: '数组', link: '/ts/array.html' },
+  { text: '元组', link: '/ts/tuple.html' },
+  { text: 'symbol 类型', link: '/ts/symbol.html' },
+  { text: '函数', link: '/ts/function.html' },
+  { text: '对象', link: '/ts/object.html' },
   {
     text: '类/泛型',
     collapsed: false,

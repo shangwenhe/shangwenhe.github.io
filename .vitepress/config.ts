@@ -1,5 +1,6 @@
-import { chaters } from '../ts-chapters'
-
+import { chaters as tschaters } from '../ts-chapters'
+import { chaters as jschaters  } from '../js-chapters'
+import { chaters as eschaters  } from '../es6-chapters'
 const footer = {
   message: 'Released under the MIT License.',
   copyright: 'Copyright © 2019-present Evan You'
@@ -7,47 +8,42 @@ const footer = {
 
 
 const nav = [
-  { text: 'Guide', link: '/guide' },
-  { text: 'Config', link: '/config' },
-  { text: 'Changelog', link: 'https://github.com/...' },
-  {
-    text: 'Dropdown Menu',
-    items: [
-      { text: 'Item A', link: '/item-1' },
-      { text: 'Item B', link: '/item-2' },
-      { text: 'Item C', link: '/item-3' }
-    ]
-  }
+  { text: 'TypeScript', link: '/ts/intro.html' },
+  { text: 'JavaScript', link: '/js/basic/introduction.html' },
+  { text: 'ES6', link: '/es6/intro.html' },
+  { text: '资料来源', link: 'https://github.com/wangdoc' },
 ];
 
-const sidebar = [
-  {
-    text: 'Guide',
+const sidebar = {
+  '/ts': {
+    text: 'TypeScript',
     collapsed: false,
-    items: chaters
+    items: tschaters
   },
-  {
-    text: 'Guide',
+  '/js':{
+    text: 'Javascript',
     collapsed: false,
-    items: [
-      { text: 'Introduction', link: '/introduction' },
-      { text: 'Getting Started', link: '/getting-started' },
-    ]
+    items: jschaters
+  },
+  '/es6':{
+    text: 'ES6',
+    collapsed: false,
+    items: eschaters
   }
-];
-
+}
 
 
 const srcExclude = [ 'typescript-tutorial/**']
 
 export default {
   // app level config options
-  lang: 'en-US',
-  title: 'Typescript',
+  lang: 'zh-CN',
+  title: 'Front End',
+  port: '5174',
   description: 'Vite & Vue powered static site generator.',
   srcExclude,
   themeConfig: {
-    siteTitle: 'My Custom Title',
+    siteTitle: 'Front End',
     nav,
     sidebar,
     footer,
