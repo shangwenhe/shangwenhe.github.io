@@ -8,14 +8,14 @@ hero:
   tagline: Resources for Developers, by Developers
   actions:
     - theme: brand
-      text: ES6
-      link: /es6/intro.html
-    - theme: alt
       text: TypeScript
       link: /ts/intro.html
     - theme: alt
       text: JavaScript
       link: /js/basic/introduction.html
+    - theme: alt
+      text: ES6
+      link: /es6/intro.html
 
 features:
   - title: TypeScript
@@ -29,5 +29,3 @@ features:
   - title: ES6
     details: ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序。
     link: /es6/intro.html
-
-
