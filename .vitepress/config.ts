@@ -3,7 +3,7 @@ import { chaters as jschaters  } from '../js-chapters'
 import { chaters as eschaters  } from '../es6-chapters'
 const footer = {
   message: 'Released under the MIT License.',
-  copyright: 'Copyright © 2019-present Evan You'
+  copyright: 'Copyright © 2023 shangwenhe.github.io from  https://github.com/wangdoc/'
 }
 
 
