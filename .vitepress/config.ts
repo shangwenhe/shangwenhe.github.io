@@ -67,12 +67,23 @@ const search =  {
     }
   }
 };
+
+const heade = [
+  [
+    'meta',
+    {
+      name: "baidu-site-verification",
+      content: "codeva-0eF9ndfgJR"
+    }
+  ]
+];
 export default {
   // app level config options
   lang: 'zh-CN',
   title: 'Front End',
+  heade,
   port: '5174',
-  description: 'Vite & Vue powered static site generator.',
+  // description: 'Vite & Vue powered static site generator.',
   srcExclude,
   themeConfig: {
     siteTitle: 'Front End',
