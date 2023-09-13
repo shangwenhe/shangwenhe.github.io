@@ -68,7 +68,7 @@ const search =  {
   }
 };
 
-const heade = [
+const head = [
   [
     'meta',
     {
@@ -81,7 +81,7 @@ export default {
   // app level config options
   lang: 'zh-CN',
   title: 'Front End',
-  heade,
+  head,
   port: '5174',
   // description: 'Vite & Vue powered static site generator.',
   srcExclude,
