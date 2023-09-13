@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.b2e9bf53.js";const u=JSON.parse('{"title":"字符串的扩展","description":"","frontmatter":{},"headers":[],"relativePath":"es6/string.md","filePath":"es6/string.md"}'),p={name:"es6/string.md"},o=l("",136),e=[o];function t(c,r,y,E,i,F){return a(),n("div",null,e)}const g=s(p,[["render",t]]);export{u as __pageData,g as default};

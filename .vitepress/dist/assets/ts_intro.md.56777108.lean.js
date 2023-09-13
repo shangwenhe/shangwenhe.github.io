@@ -1,0 +1,1 @@
+import{_ as s,o as p,c as a,Q as n}from"./chunks/framework.681fc4ae.js";const F=JSON.parse('{"title":"TypeScript 语言简介","description":"","frontmatter":{},"headers":[],"relativePath":"ts/intro.md","filePath":"ts/intro.md"}'),l={name:"ts/intro.md"},o=n("",82),e=[o];function c(t,r,y,i,E,d){return p(),a("div",null,e)}const S=s(l,[["render",c]]);export{F as __pageData,S as default};

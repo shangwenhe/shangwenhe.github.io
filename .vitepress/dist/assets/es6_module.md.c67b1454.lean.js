@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,Q as p}from"./chunks/framework.b2e9bf53.js";const u=JSON.parse('{"title":"Module 的语法","description":"","frontmatter":{},"headers":[],"relativePath":"es6/module.md","filePath":"es6/module.md"}'),l={name:"es6/module.md"},o=p("",211),e=[o];function c(t,r,y,E,i,d){return a(),n("div",null,e)}const m=s(l,[["render",c]]);export{u as __pageData,m as default};

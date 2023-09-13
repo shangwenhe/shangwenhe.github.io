@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as p,Q as o}from"./chunks/framework.681fc4ae.js";const F=JSON.parse('{"title":"TypeScript 模块","description":"","frontmatter":{},"headers":[],"relativePath":"ts/module.md","filePath":"ts/module.md"}'),n={name:"ts/module.md"},l=o("",123),e=[l];function t(c,r,y,i,E,d){return a(),p("div",null,e)}const h=s(n,[["render",t]]);export{F as __pageData,h as default};

@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as p}from"./chunks/framework.681fc4ae.js";const h=JSON.parse('{"title":"实例对象与 new 命令","description":"","frontmatter":{},"headers":[],"relativePath":"js/oop/new.md","filePath":"js/oop/new.md"}'),l={name:"js/oop/new.md"},o=p("",65),e=[o];function c(t,r,E,y,i,d){return n(),a("div",null,e)}const u=s(l,[["render",c]]);export{h as __pageData,u as default};

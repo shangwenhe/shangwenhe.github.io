@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.681fc4ae.js";const b=JSON.parse('{"title":"Reflect","description":"","frontmatter":{},"headers":[],"relativePath":"es6/reflect.md","filePath":"es6/reflect.md"}'),p={name:"es6/reflect.md"},o=l("",101),e=[o];function c(t,r,y,E,i,d){return n(),a("div",null,e)}const g=s(p,[["render",c]]);export{b as __pageData,g as default};

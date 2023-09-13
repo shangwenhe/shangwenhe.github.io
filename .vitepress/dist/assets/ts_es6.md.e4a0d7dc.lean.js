@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.b2e9bf53.js";const g=JSON.parse('{"title":"TypeScript 的 ES6 类型","description":"","frontmatter":{},"headers":[],"relativePath":"ts/es6.md","filePath":"ts/es6.md"}'),p={name:"ts/es6.md"},o=l("",40),e=[o];function t(c,r,y,E,i,d){return a(),n("div",null,e)}const u=s(p,[["render",t]]);export{g as __pageData,u as default};

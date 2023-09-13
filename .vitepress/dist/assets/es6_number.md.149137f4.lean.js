@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,Q as p}from"./chunks/framework.b2e9bf53.js";const h=JSON.parse('{"title":"数值的扩展","description":"","frontmatter":{},"headers":[],"relativePath":"es6/number.md","filePath":"es6/number.md"}'),l={name:"es6/number.md"},o=p("",249),e=[o];function c(t,r,y,E,i,d){return a(),n("div",null,e)}const u=s(l,[["render",c]]);export{h as __pageData,u as default};

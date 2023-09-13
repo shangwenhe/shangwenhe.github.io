@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.681fc4ae.js";const u=JSON.parse('{"title":"let 和 const 命令","description":"","frontmatter":{},"headers":[],"relativePath":"es6/let.md","filePath":"es6/let.md"}'),p={name:"es6/let.md"},o=l("",142),e=[o];function c(t,r,E,y,i,d){return n(),a("div",null,e)}const h=s(p,[["render",c]]);export{u as __pageData,h as default};

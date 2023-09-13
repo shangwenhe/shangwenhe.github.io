@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,Q as p}from"./chunks/framework.b2e9bf53.js";const h=JSON.parse('{"title":"Class 的基本语法","description":"","frontmatter":{},"headers":[],"relativePath":"es6/class.md","filePath":"es6/class.md"}'),l={name:"es6/class.md"},o=p("",218),e=[o];function c(t,r,E,y,i,F){return n(),a("div",null,e)}const C=s(l,[["render",c]]);export{h as __pageData,C as default};

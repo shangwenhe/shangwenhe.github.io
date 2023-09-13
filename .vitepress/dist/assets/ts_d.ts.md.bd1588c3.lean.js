@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,Q as p}from"./chunks/framework.b2e9bf53.js";const u=JSON.parse('{"title":"d.ts 类型声明文件","description":"","frontmatter":{},"headers":[],"relativePath":"ts/d.ts.md","filePath":"ts/d.ts.md"}'),l={name:"ts/d.ts.md"},o=p("",117),e=[o];function t(c,r,y,E,i,d){return n(),a("div",null,e)}const h=s(l,[["render",t]]);export{u as __pageData,h as default};

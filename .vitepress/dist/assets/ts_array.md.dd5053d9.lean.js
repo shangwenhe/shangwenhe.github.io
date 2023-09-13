@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,Q as p}from"./chunks/framework.b2e9bf53.js";const C=JSON.parse('{"title":"TypeScript 的数组类型","description":"","frontmatter":{},"headers":[],"relativePath":"ts/array.md","filePath":"ts/array.md"}'),l={name:"ts/array.md"},o=p("",74),e=[o];function c(t,r,y,E,i,d){return a(),n("div",null,e)}const u=s(l,[["render",c]]);export{C as __pageData,u as default};

@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.681fc4ae.js";const u=JSON.parse('{"title":"Mixin","description":"","frontmatter":{},"headers":[],"relativePath":"es6/mixin.md","filePath":"es6/mixin.md"}'),p={name:"es6/mixin.md"},o=l("",24),e=[o];function t(c,r,E,y,i,d){return a(),n("div",null,e)}const m=s(p,[["render",t]]);export{u as __pageData,m as default};
