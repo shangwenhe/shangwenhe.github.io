@@ -24,6 +24,7 @@ const { Layout } = DefaultTheme
         inputPosition="bottom"
         theme="light"
         lang="zh-CN"
+        loading="lazy"
         crossorigin="anonymous"
         term="Welcome to @giscus/vue component!"
       />
