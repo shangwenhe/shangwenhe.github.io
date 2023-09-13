@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: 让学习简单
+  name: 让学习，更简单。
   text: Front End
   tagline: Resources for Developers, by Developers
   actions:
