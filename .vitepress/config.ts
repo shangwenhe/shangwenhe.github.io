@@ -77,12 +77,17 @@ const head = [
     }
   ]
 ];
+const sitemap = {
+  hostname: 'https://shangwenhe.github.io',
+  lastmodDateOnly: false
+}
 export default {
   // app level config options
   lang: 'zh-CN',
   title: 'Front End',
   head,
   port: '5174',
+  sitemap,
   // description: 'Vite & Vue powered static site generator.',
   srcExclude,
   themeConfig: {
