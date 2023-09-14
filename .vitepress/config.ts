@@ -3,6 +3,7 @@ import { chaters as jschaters  } from '../chapters/js-chapters'
 import { chaters as eschaters  } from '../chapters/es6-chapters'
 import { chaters as bashchaters  } from '../chapters/bash-chapters'
 import { chaters as bashcommandchaters  } from '../chapters/bash-command-chapters'
+import { chaters as blogchaters  } from '../chapters/blog-chapters'
 const footer = {
   message: 'Released under the MIT License.',
   copyright: 'Copyright © 2023 shangwenhe.github.io from  https://github.com/wangdoc/'
@@ -13,6 +14,7 @@ const nav = [
   { text: 'TypeScript', link: '/ts/intro.html' },
   { text: 'JavaScript', link: '/js/basic/introduction.html' },
   { text: 'ES6', link: '/es6/intro.html' },
+  { text: 'Blog', link: '/blog/namespace.md' },
   {
     text: '相关资料',
     link: 'https://github.com/wangdoc',
@@ -46,6 +48,11 @@ const sidebar = {
     text: 'Bash',
     collapsed: false,
     items: bashchaters
+  },
+  '/blog': {
+    text: 'Blog',
+    collapsed: false,
+    items: blogchaters
   },
 }
 

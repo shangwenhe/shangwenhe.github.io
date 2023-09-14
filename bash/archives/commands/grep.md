@@ -65,3 +65,10 @@ $ grep -r admin /etc/
 # 显示所有包含 vim，但不包含 grep 的行
 $ ps | grep vim | grep -v grep
 ```
+
+
+`-exclude-dir` 排除查找目录
+
+```bash
+grep -r 'xxx/token' ./ --exclude-dir='*/node_modules' --exclude-dir='*/build'
+```

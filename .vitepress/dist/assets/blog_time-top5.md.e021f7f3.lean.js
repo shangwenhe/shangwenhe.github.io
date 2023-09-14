@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as o,Q as p}from"./chunks/framework.681fc4ae.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"blog/time-top5.md","filePath":"blog/time-top5.md"}'),l={name:"blog/time-top5.md"},e=p("",9),t=[e];function n(c,r,i,d,y,h){return a(),o("div",null,t)}const E=s(l,[["render",n]]);export{g as __pageData,E as default};
