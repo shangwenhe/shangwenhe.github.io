@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as p}from"./chunks/framework.681fc4ae.js";const F=JSON.parse('{"title":"set 命令，shopt 命令","description":"","frontmatter":{},"headers":[],"relativePath":"bash/set.md","filePath":"bash/set.md"}'),l={name:"bash/set.md"},o=p("",116),e=[o];function c(t,r,i,y,E,d){return a(),n("div",null,e)}const b=s(l,[["render",c]]);export{F as __pageData,b as default};

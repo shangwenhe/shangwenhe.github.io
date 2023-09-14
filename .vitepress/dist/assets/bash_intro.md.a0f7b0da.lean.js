@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as l,Q as e}from"./chunks/framework.681fc4ae.js";const F=JSON.parse('{"title":"Bash 简介","description":"","frontmatter":{},"headers":[],"relativePath":"bash/intro.md","filePath":"bash/intro.md"}'),p={name:"bash/intro.md"},n=e("",61),o=[n];function c(t,r,h,i,d,y){return a(),l("div",null,o)}const b=s(p,[["render",c]]);export{F as __pageData,b as default};

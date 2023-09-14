@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as p}from"./chunks/framework.681fc4ae.js";const C=JSON.parse('{"title":"脚本除错","description":"","frontmatter":{},"headers":[],"relativePath":"bash/debug.md","filePath":"bash/debug.md"}'),l={name:"bash/debug.md"},o=p("",62),e=[o];function c(t,r,E,y,i,F){return n(),a("div",null,e)}const u=s(l,[["render",c]]);export{C as __pageData,u as default};

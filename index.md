@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: ES6
       link: /es6/intro.html
+    - theme: alt
+      text: 常用命令
+      link: /bash/archives/commands/cut.html
 
 features:
   - title: TypeScript
@@ -29,3 +32,7 @@ features:
   - title: ES6
     details: ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序。
     link: /es6/intro.html
+
+  - title: BASH
+    details: Bash 是 Unix 系统和 Linux 系统的一种 Shell（命令行环境），是目前绝大多数 Linux 发行版的默认 Shell。
+    link: /bash/intro.html

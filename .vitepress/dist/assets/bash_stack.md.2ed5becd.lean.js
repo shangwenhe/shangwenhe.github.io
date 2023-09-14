@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as p}from"./chunks/framework.681fc4ae.js";const F=JSON.parse('{"title":"目录堆栈","description":"","frontmatter":{},"headers":[],"relativePath":"bash/stack.md","filePath":"bash/stack.md"}'),l={name:"bash/stack.md"},o=p("",34),e=[o];function c(t,r,d,i,y,h){return a(),n("div",null,e)}const u=s(l,[["render",c]]);export{F as __pageData,u as default};

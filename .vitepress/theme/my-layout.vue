@@ -8,7 +8,6 @@ const { Layout } = DefaultTheme
 <template>
   <Layout>
     <template #aside-outline-after>
-      My custom sidebar bottom content
     </template>
     <template #doc-after>
       <Giscus

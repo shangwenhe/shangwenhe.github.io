@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as p}from"./chunks/framework.681fc4ae.js";const F=JSON.parse('{"title":"字符串操作","description":"","frontmatter":{},"headers":[],"relativePath":"bash/string.md","filePath":"bash/string.md"}'),l={name:"bash/string.md"},o=p("",85),e=[o];function c(t,r,y,i,E,d){return a(),n("div",null,e)}const g=s(l,[["render",c]]);export{F as __pageData,g as default};

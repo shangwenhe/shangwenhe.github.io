@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.681fc4ae.js";const h=JSON.parse('{"title":"循环","description":"","frontmatter":{},"headers":[],"relativePath":"bash/loop.md","filePath":"bash/loop.md"}'),p={name:"bash/loop.md"},o=l("",90),e=[o];function c(t,r,y,i,E,d){return n(),a("div",null,e)}const u=s(p,[["render",c]]);export{h as __pageData,u as default};

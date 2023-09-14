@@ -1,0 +1,1 @@
+import{_ as s,o,c as a,Q as l}from"./chunks/framework.681fc4ae.js";const u=JSON.parse('{"title":"命令提示符","description":"","frontmatter":{},"headers":[],"relativePath":"bash/prompt.md","filePath":"bash/prompt.md"}'),e={name:"bash/prompt.md"},p=l("",38),c=[p];function n(t,d,i,r,h,y){return o(),a("div",null,c)}const F=s(e,[["render",n]]);export{u as __pageData,F as default};

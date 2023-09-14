@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,Q as l}from"./chunks/framework.681fc4ae.js";const h=JSON.parse('{"title":"read 命令","description":"","frontmatter":{},"headers":[],"relativePath":"bash/read.md","filePath":"bash/read.md"}'),p={name:"bash/read.md"},o=l("",59),e=[o];function c(t,r,y,E,F,i){return a(),n("div",null,e)}const u=s(p,[["render",c]]);export{h as __pageData,u as default};

@@ -1,6 +1,8 @@
-import { chaters as tschaters } from '../ts-chapters'
-import { chaters as jschaters  } from '../js-chapters'
-import { chaters as eschaters  } from '../es6-chapters'
+import { chaters as tschaters } from '../chapters/ts-chapters'
+import { chaters as jschaters  } from '../chapters/js-chapters'
+import { chaters as eschaters  } from '../chapters/es6-chapters'
+import { chaters as bashchaters  } from '../chapters/bash-chapters'
+import { chaters as bashcommandchaters  } from '../chapters/bash-command-chapters'
 const footer = {
   message: 'Released under the MIT License.',
   copyright: 'Copyright © 2023 shangwenhe.github.io from  https://github.com/wangdoc/'
@@ -34,11 +36,20 @@ const sidebar = {
     text: 'ES6',
     collapsed: false,
     items: eschaters
-  }
+  },
+  '/bash/archives/commands': {
+    text: 'Bash',
+    collapsed: false,
+    items: bashcommandchaters
+  },
+  '/bash': {
+    text: 'Bash',
+    collapsed: false,
+    items: bashchaters
+  },
 }
 
-
-const srcExclude = [ 'h/*']
+const srcExclude = [ 'h/*', 'chapters/**']
 
 const socialLinks = [
   { icon: 'github', link: 'https://github.com/shangwenhe/shangwenhe.github.io' },
