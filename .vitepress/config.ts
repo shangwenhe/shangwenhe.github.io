@@ -4,6 +4,8 @@ import { chaters as eschaters  } from '../chapters/es6-chapters'
 import { chaters as bashchaters  } from '../chapters/bash-chapters'
 import { chaters as bashcommandchaters  } from '../chapters/bash-command-chapters'
 import { chaters as blogchaters  } from '../chapters/blog-chapters'
+import { chaters as svgchaters  } from '../chapters/svg-chapters'
+
 const footer = {
   message: 'Released under the MIT License.',
   copyright: 'Copyright © 2023 shangwenhe.github.io from  https://github.com/wangdoc/'
@@ -53,6 +55,11 @@ const sidebar = {
     text: 'Blog',
     collapsed: false,
     items: blogchaters
+  },
+  '/svg': {
+    text: 'Svg',
+    collapsed: false,
+    items: svgchaters
   },
 }
 
