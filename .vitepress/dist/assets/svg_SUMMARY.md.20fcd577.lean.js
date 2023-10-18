@@ -1,0 +1,1 @@
+import{_ as l,o as a,c as i,Q as e}from"./chunks/framework.681fc4ae.js";const n=JSON.parse('{"title":"概要","description":"","frontmatter":{},"headers":[],"relativePath":"svg/SUMMARY.md","filePath":"svg/SUMMARY.md"}'),t={name:"svg/SUMMARY.md"},h=e("",2),S=[h];function V(G,r,m,f,s,o){return a(),i("div",null,S)}const _=l(t,[["render",V]]);export{n as __pageData,_ as default};

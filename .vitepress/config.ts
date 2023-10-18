@@ -8,7 +8,7 @@ import { chaters as svgchaters  } from '../chapters/svg-chapters'
 
 const footer = {
   message: 'Released under the MIT License.',
-  copyright: 'Copyright © 2023 shangwenhe.github.io from  https://github.com/wangdoc/'
+  copyright: 'Copyright © 2023 <a href="mailto:ashang.wenhe@gmail.com">ashang.wenhe@gmail.com</a>'
 }
 
 

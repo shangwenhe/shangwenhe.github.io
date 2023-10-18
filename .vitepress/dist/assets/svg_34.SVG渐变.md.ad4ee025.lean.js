@@ -1,0 +1,1 @@
+import{_ as s,o,c as a,Q as n}from"./chunks/framework.681fc4ae.js";const u=JSON.parse('{"title":"SVG渐变","description":"","frontmatter":{},"headers":[],"relativePath":"svg/34.SVG渐变.md","filePath":"svg/34.SVG渐变.md"}'),l={name:"svg/34.SVG渐变.md"},p=n("",54),t=[p];function e(r,c,y,E,i,d){return o(),a("div",null,t)}const q=s(l,[["render",e]]);export{u as __pageData,q as default};

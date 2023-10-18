@@ -1,0 +1,1 @@
+import{_ as s,o,c as a,Q as l}from"./chunks/framework.681fc4ae.js";const F=JSON.parse('{"title":"SVG例子","description":"","frontmatter":{},"headers":[],"relativePath":"svg/2.SVG示例.md","filePath":"svg/2.SVG示例.md"}'),p={name:"svg/2.SVG示例.md"},n=l("",23),t=[n];function e(c,r,E,y,i,u){return o(),a("div",null,t)}const d=s(p,[["render",e]]);export{F as __pageData,d as default};

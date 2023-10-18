@@ -1,0 +1,1 @@
+import{_ as s,o as l,c as a,Q as n}from"./chunks/framework.681fc4ae.js";const d=JSON.parse('{"title":"SVG填充","description":"","frontmatter":{},"headers":[],"relativePath":"svg/29.SVG填充.md","filePath":"svg/29.SVG填充.md"}'),o={name:"svg/29.SVG填充.md"},p=n("",37),e=[p];function t(c,r,y,E,i,u){return l(),a("div",null,e)}const f=s(o,[["render",t]]);export{d as __pageData,f as default};
