@@ -19,6 +19,9 @@ hero:
     - theme: alt
       text: 常用命令
       link: /bash/archives/commands/cut.html
+    - theme: alt
+      text: SVG 学习
+      link: /svg/SUMMARY.html
 
 features:
   - title: TypeScript
