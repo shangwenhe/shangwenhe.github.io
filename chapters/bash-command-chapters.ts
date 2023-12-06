@@ -10,6 +10,7 @@ export const chaters = [
       { text: "find", link: "/bash/archives/commands/find.html" },
       { text: "ps", link: "/bash/archives/commands/ps.html" },
       { text: "scp", link: "/bash/archives/commands/scp.html" },
+      { text: "xargs", link: "/bash/archives/commands/xargs.html" },
     ]
   },
   {
