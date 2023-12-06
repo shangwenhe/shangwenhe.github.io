@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 
 
@@ -8,7 +8,7 @@ npm pkg set <field>=<value> [.<subfield>=<value> ...]
 npm pkg delete <field> [.<subfield> ...]
 ```
 
-### `description`
+## 描述
 
 自动管理文件的命令`package.json`。`npm pkg`提供 3 个不同的子命令，允许您修改或检索`package.json`.
 
@@ -100,7 +100,7 @@ npm pkg get contributors.email
   npm pkg delete scripts.build
   ```
 
-### `workspaces-support`
+## `workspaces-support`
 
 您可以使用`workspace`或`workspaces`config 选项在配置的工作区中设置/获取/删除项目。
 
@@ -128,9 +128,9 @@ npm pkg get name version --ws
 }
 ```
 
-### `configuration`
+## `configuration`
 
-#### `force`
+## `force`
 
 - 默认值：假
 - 类型：布尔值
@@ -150,7 +150,7 @@ npm pkg get name version --ws
 
 如果您不清楚自己要做什么，强烈建议您不要使用此选项！
 
-#### `json`
+## `json`
 
 - 默认值：假
 - 类型：布尔值
@@ -161,7 +161,7 @@ npm pkg get name version --ws
 
 并非所有 npm 命令都支持。
 
-#### `workspace`
+## `workspace`
 
 - 默认：
 - 类型：String（可设置多次）
@@ -178,7 +178,7 @@ npm pkg get name version --ws
 
 该值不会导出到子进程的环境中。
 
-#### `workspaces`
+## `workspaces`
 
 - 默认值：假
 - 类型：布尔值

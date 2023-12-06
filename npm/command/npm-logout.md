@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 ```bash
 npm logout [--registry=<url>] [--scope=<@scope>]
@@ -6,7 +6,7 @@ npm logout [--registry=<url>] [--scope=<@scope>]
 
 注意：此命令不知道工作区。
 
-### `description`
+## 描述
 
 当登录到支持基于令牌的身份验证的注册表时，告诉服务器结束此令牌的会话。这将使令牌在您使用的任何地方都无效，而不仅仅是当前环境。
 
@@ -14,16 +14,16 @@ npm logout [--registry=<url>] [--scope=<@scope>]
 
 如果`--scope`提供，这将查找连接到该范围的注册表的凭据（如果设置）。
 
-### `configuration`
+## `configuration`
 
-#### `registry`
+## `registry`
 
 - 默认值：“ https://registry.npmjs.org/ ”
 - 类型： 网址
 
 npm 注册表的基本 URL。
 
-#### `scope`
+## `scope`
 
 - 默认值：当前项目的范围（如果有）或“”
 - 类型：字符串

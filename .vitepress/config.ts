@@ -5,6 +5,7 @@ import { chaters as bashchaters  } from '../chapters/bash-chapters'
 import { chaters as bashcommandchaters  } from '../chapters/bash-command-chapters'
 import { chaters as blogchaters  } from '../chapters/blog-chapters'
 import { chaters as svgchaters  } from '../chapters/svg-chapters'
+import { chaters as npmchaters  } from '../chapters/npm-chapters'
 
 const footer = {
   message: 'Released under the MIT License.',
@@ -61,6 +62,11 @@ const sidebar = {
     collapsed: false,
     items: svgchaters
   },
+  '/npm': {
+    text: 'NPM',
+    collapsed: false,
+    items: npmchaters
+  }
 }
 
 const srcExclude = [ 'h/*', 'chapters/**']

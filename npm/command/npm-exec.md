@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 
 ```bash
@@ -22,7 +22,7 @@ common options:
 -c <cmd> --call=<cmd> (may not be mixed with positional arguments)
 ```
 
-### `description`
+## 描述
 
 此命令允许您从 npm 包（本地安装或远程获取）运行任意命令，其上下文与通过`npm run`.
 
@@ -42,7 +42,7 @@ common options:
 
 要运行指定二进制文件*以外的*二进制文件，请指定一个或多个`--package`选项，这将阻止 npm 从第一个命令参数推断包。
 
-### `npx-vs-npm-exec`
+## `npx-vs-npm-exec`
 
 当通过`npx`二进制文件运行时，所有标志和选项*必须*在任何位置参数之前设置。当通过 运行时`npm exec`，双连字符`--`标志可用于抑制 npm 对应发送到执行命令的开关和选项的解析。
 
@@ -78,16 +78,16 @@ $ foo@latest bar
 $ npm exec -- foo@latest bar --package=@npmcli/foo
 ```
 
-### `configuration`
+## `configuration`
 
-#### `package`
+## `package`
 
 - 默认：
 - 类型：String（可设置多次）
 
 要安装的包`npm exec`
 
-#### `call`
+## `call`
 
 - 默认： ””
 - 类型：字符串
@@ -100,7 +100,7 @@ $ npm exec -- foo@latest bar --package=@npmcli/foo
 npm exec --package yo --package generator-node --call "yo node"
 ```
 
-#### `workspace`
+## `workspace`
 
 - 默认：
 - 类型：String（可设置多次）
@@ -117,7 +117,7 @@ npm exec --package yo --package generator-node --call "yo node"
 
 该值不会导出到子进程的环境中。
 
-#### `workspaces`
+## `workspaces`
 
 - 默认值：假
 - 类型：布尔值
@@ -126,7 +126,7 @@ npm exec --package yo --package generator-node --call "yo node"
 
 该值不会导出到子进程的环境中。
 
-### `examples`
+## `examples`
 
 `tap`使用提供的参数运行本地依赖项中的版本：
 
@@ -156,7 +156,7 @@ $ npm x -c 'eslint && say "hooray, lint passed"'
 $ npx -c 'eslint && say "hooray, lint passed"'
 ```
 
-### `workspaces-support`
+## `workspaces-support`
 
 您可以使用`workspace`或`workspaces`配置来在指定工作区的上下文中从 npm 包（本地安装或远程获取）运行任意命令。如果未`--call`提供位置参数或选项，它将在每个已配置工作区的上下文中一次打开一个交互式子 shell。
 
@@ -192,7 +192,7 @@ $ npx -c 'eslint && say "hooray, lint passed"'
 npm exec --ws -- eslint ./*.js
 ```
 
-#### `filtering-workspaces`
+## `filtering-workspaces`
 
 还可以使用`workspace`配置以及名称或目录路径在单个工作区中执行命令：
 
@@ -208,7 +208,7 @@ npm exec -w a -w b -- eslint ./*.js
 
 `eslint`最后一个命令将在`./packages/a`和文件夹中运行该命令`./packages/b`。
 
-### `compatibility-with-older-npx-versions`
+## `compatibility-with-older-npx-versions`
 
 该`npx`二进制文件在 npm v7.0.0 中被重写，并且独立`npx`包当时已被弃用。`npx`使用该`npm exec`命令而不是单独的参数解析器和安装过程，并提供一些功能来保持与其在先前版本中接受的参数的向后兼容性。
 
@@ -225,23 +225,23 @@ npm exec -w a -w b -- eslint ./*.js
 - 该`--always-spawn`选项是多余的，因此被删除。
 - 该`--shell`选项被替换为`--script-shell`，但保留在`npx`可执行文件中以实现向后兼容性。
 
-### `a-note-on-caching`
+## `a-note-on-caching`
 
 当使用指定的包名称时，npm cli 利用其内部包缓存。您可以使用以下命令更改 cli 使用此缓存的方式和时间。请参阅`npm cache`参考资料 来了解有关缓存如何工作的更多信息。
 
-#### `prefer-online`
+## `prefer-online`
 
 强制对包进行过时检查，使 cli 立即查找更新，即使包已在缓存中也是如此。
 
-#### `prefer-offline`
+## `prefer-offline`
 
 绕过包的陈旧性检查。仍然会向服务器请求丢失的数据。要强制完全离线模式，请使用`offline`.
 
-#### `offline`
+## `offline`
 
 强制完全离线模式。任何未本地缓存的包都将导致错误。
 
-#### `workspace-1`
+## `workspace-1`
 
 - 默认：
 - 类型：String（可设置多次）
@@ -256,7 +256,7 @@ npm exec -w a -w b -- eslint ./*.js
 
 该值不会导出到子进程的环境中。
 
-#### `workspaces-1`
+## `workspaces-1`
 
 - 别名：`--ws`
 - 类型：布尔值

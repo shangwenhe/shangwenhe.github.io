@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 
 
@@ -9,7 +9,7 @@ npm link [<@scope>/]<pkg>[@<version>]
 alias: npm ln
 ```
 
-### `description`
+## 描述
 
 这对于安装您自己的东西很方便，这样您就可以对其进行工作并进行迭代测试，而无需不断重建。
 
@@ -64,7 +64,7 @@ npm link redis
 npm link @myorg/privatepackage
 ```
 
-### `caveat`
+## `caveat`
 
 *请注意，默认情况下不会*保存以这种方式链接的包依赖项`package.json`，因为假设目的是用链接代替常规非链接依赖项。否则，例如，如果您依赖于`redis@^3.0.1`, 并运行`npm link redis`，它会将依赖项替换`^3.0.1`为`file:../path/to/node-redis`，这可能是您不想要的！此外，如果项目中的其他用户或开发人员的文件夹设置与您的文件夹不完全相同，他们也会遇到问题。
 
@@ -72,15 +72,15 @@ npm link @myorg/privatepackage
 
 如果您*想*将参考保存`file:`在您的`package.json`文件中`package-lock.json`，您可以`npm link <dep> --save`这样做。
 
-### `workspace-usage`
+## `workspace-usage`
 
 `npm link <pkg> --workspace <name>`将链接相关包作为指定工作空间的依赖项。`node_modules`请注意，如果不存在冲突的依赖项，它实际上可能链接到父项目的文件夹中。
 
 `npm link --workspace <name>`将创建到指定工作区的全局链接。
 
-### `configuration`
+## `configuration`
 
-#### `save`
+## `save`
 
 - Default: true
 - Type: Boolean
@@ -89,14 +89,14 @@ npm link @myorg/privatepackage
 
 与该`npm rm`命令一起使用时，从 package.json 中删除依赖项。
 
-#### `save-exact`
+## `save-exact`
 
 - Default: false
 - Type: Boolean
 
 保存到 package.json 的依赖项将使用精确的版本进行配置，而不是使用 npm 的默认 semver 范围运算符。
 
-#### `global`
+## `global`
 
 - Default: false
 - Type: Boolean
@@ -107,21 +107,21 @@ npm link @myorg/privatepackage
 - bin 文件链接到`{prefix}/bin`
 - 手册页链接到`{prefix}/share/man`
 
-#### `global-style`
+## `global-style`
 
 - Default: false
 - Type: Boolean
 
 使 npm 将包安装到本地`node_modules`文件夹中，其布局与全局文件夹使用的布局相同`node_modules`。只有您的直接依赖项才会显示，`node_modules`并且它们依赖的所有内容都将在其`node_modules`文件夹中展平。这显然会消除一些重复数据删除。如果与 一起使用`legacy-bundling`，`legacy-bundling`将是首选。
 
-#### `legacy-bundling`
+## `legacy-bundling`
 
 - 默认值：假
 - 类型：布尔值
 
 使 npm 安装该软件包，以便 1.4 之前的 npm 版本（例如 Node 0.8 中包含的版本）可以安装该软件包。这消除了所有自动重复数据删除。如果与`global-style`此选项一起使用将是首选。
 
-#### `strict-peer-deps`
+## `strict-peer-deps`
 
 - 默认值：假
 - 类型：布尔值
@@ -132,7 +132,7 @@ npm link @myorg/privatepackage
 
 当执行此类和覆盖时，会打印一条警告，解释冲突和涉及的包。如果`--strict-peer-deps`设置了，则此警告将被视为失败。
 
-#### `package-lock`
+## `package-lock`
 
 - Default: true
 - Type: Boolean
@@ -141,7 +141,7 @@ npm link @myorg/privatepackage
 
 当包包锁被禁用时，无关模块的自动修剪也将被禁用。要删除禁用包锁的无关模块，请使用`npm prune`.
 
-#### `omit`
+## `omit`
 
 - 默认值：如果`NODE_ENV`环境变量设置为“生产”，则为“dev”，否则为空。
 - 类型：“dev”、“可选”或“peer”（可以设置多次）
@@ -154,7 +154,7 @@ npm link @myorg/privatepackage
 
 如果生成的省略列表包含`'dev'`，则所有生命周期脚本的`NODE_ENV`环境变量将设置为。`'production'`
 
-#### `ignore-scripts`
+## `ignore-scripts`
 
 - 默认值：假
 - 类型：布尔值
@@ -163,14 +163,14 @@ npm link @myorg/privatepackage
 
 请注意，明确旨在运行特定脚本的命令，例如`npm start`、`npm stop`、`npm restart`、`npm test`、 和如果设置了，`npm run-script`仍将运行其预期脚本，但它们*不会*运行任何前置或后置脚本。`ignore-scripts`
 
-#### `audit`
+## `audit`
 
 - 默认值：true
 - 类型：布尔值
 
 当“true”时，将审核报告与当前 npm 命令一起提交到默认注册表和为范围配置的所有注册表。`npm audit`有关提交内容的详细信息，请参阅文档。
 
-#### `bin-links`
+## `bin-links`
 
 - 默认值：true
 - 类型：布尔值
@@ -179,14 +179,14 @@ npm link @myorg/privatepackage
 
 设置为 false 以使其不执行此操作。这可以用来解决某些文件系统不支持符号链接的问题，即使在表面上的 Unix 系统上也是如此。
 
-#### `fund`
+## `fund`
 
 - 默认值：true
 - 类型：布尔值
 
 当“true”时，会在每个消息末尾显示消息`npm install`，确认寻求资金的依赖项的数量。`npm fund`详情请参阅。
 
-#### `dry-run`
+## `dry-run`
 
 - 默认值：假
 - 类型：布尔值
@@ -195,7 +195,7 @@ npm link @myorg/privatepackage
 
 注意：其他网络相关命令不支持这一点，例如`dist-tags`、`owner`等。
 
-#### `workspace`
+## `workspace`
 
 - 默认：
 - 类型：String（可设置多次）
@@ -212,7 +212,7 @@ npm link @myorg/privatepackage
 
 该值不会导出到子进程的环境中。
 
-#### `workspaces`
+## `workspaces`
 
 - 默认值：假
 - 类型：布尔值

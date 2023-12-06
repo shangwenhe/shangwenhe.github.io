@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 
 
@@ -8,13 +8,13 @@ npm prefix [-g]
 
 注意：此命令不知道工作区。
 
-### `description`
+## 描述
 
 将本地前缀打印到标准输出。这是包含`package.json`文件或`node_modules`目录的最接近的父目录，除非`-g`也指定了。
 
 如果`-g`指定，这将是全局前缀的值。`npm config`详情请参阅。
 
-### `example`
+## `example`
 
 ```bash
 npm prefix
@@ -28,9 +28,9 @@ npm prefix -g
 /usr/local
 ```
 
-### `configuration`
+## `configuration`
 
-#### `global`
+## `global`
 
 - 默认值：假
 - 类型：布尔值
@@ -43,7 +43,7 @@ npm prefix -g
 
 
 
-### 使用示例： 
+## 使用示例： 
 
 > 在给定的工程目录下执行命令
 

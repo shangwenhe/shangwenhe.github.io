@@ -1,20 +1,21 @@
-### `description`
+
+## 描述
 
 npm 从以下来源获取其配置值，按优先级排序：
 
-#### `command-line-flags`
+## `command-line-flags`
 
 放在`--foo bar`命令行上将`foo`配置参数设置为`"bar"`。参数`--`告诉 cli 解析器停止读取标志。在不指定任何值的情况下使用`--flag`会将值设置为`true`。
 
 示例：`--flag1 --flag2`将两个配置参数设置为`true`、同时`--flag1 --flag2 bar`将设置`flag1`为`true`、`flag2`和`bar`。最后，`--flag1 --flag2 -- bar`将两个配置参数设置为`true`，并将`bar`视为命令参数。
 
-#### `environment-variables`
+## `environment-variables`
 
 任何以 开头的环境变量都`npm_config_`将被解释为配置参数。例如，放入`npm_config_foo=bar`您的环境中会将`foo`配置参数设置为`bar`. 任何未指定值的环境配置都将指定为 的值`true`。配置值不区分大小写，因此`NPM_CONFIG_FOO=bar`工作原理相同。但是，请注意，`scripts`。
 
 请注意，您需要使用下划线而不是破折号，因此`--allow-same-version`将变成`npm_config_allow_same_version=true`.
 
-#### `npmrc-files`
+## `npmrc-files`
 
 四个相关文件是：
 
@@ -25,11 +26,11 @@ npm 从以下来源获取其配置值，按优先级排序：
 
 有关更多详细信息，请参阅[npmrc 。](https://docs.npmjs.com/cli/v7/configuring-npm/npmrc)
 
-#### `default-configs`
+## `default-configs`
 
 运行`npm config ls -l`以查看 npm 内部的一组配置参数，如果未指定其他参数，则这些参数为默认值。
 
-### `shorthands-and-other-cli-niceties`
+## `shorthands-and-other-cli-niceties`
 
 在命令行上解析以下简写：
 
@@ -89,9 +90,9 @@ npm ls -gpld
 npm ls --global --parseable --long --loglevel info
 ```
 
-### `config-settings`
+## `config-settings`
 
-#### `_auth`
+## `_auth`
 
 - 默认值：空
 - 类型：null 或 String
@@ -100,7 +101,7 @@ npm ls --global --parseable --long --loglevel info
 
 警告：通常不应通过命令行选项设置。通过运行 来使用存储在 ~/.npmrc 文件中的注册表提供的身份验证承载令牌更安全`npm login`。
 
-#### `access`
+## `access`
 
 - 默认值：“restricted”适用于有作用域的包，“public”适用于无作用域的包
 - 类型：null、“受限”或“公共”
@@ -109,35 +110,35 @@ npm ls --global --parseable --long --loglevel info
 
 注意：在命令`--access`上使用标志`npm publish`只会在包的初始发布时设置包访问级别。使用该标志的任何后续`npm publish`命令都`--access`不会影响访问级别。要在初始发布使用后更改访问级别`npm access`。
 
-#### `all`
+## `all`
 
 - 默认值：假
 - 类型：布尔值
 
 运行`npm outdated`和时`npm ls`，设置`--all`将显示所有过时或已安装的软件包，而不仅仅是当前项目直接依赖的软件包。
 
-#### `allow-same-version`
+## `allow-same-version`
 
 - 默认值：假
 - 类型：布尔值
 
 `npm version`防止在用于将新版本设置为与当前版本相同的值时引发错误。
 
-#### `audit`
+## `audit`
 
 - 默认值：true
 - 类型：布尔值
 
 当“true”时，将审核报告与当前 npm 命令一起提交到默认注册表和为范围配置的所有注册表。`npm audit`有关提交内容的详细信息，请参阅文档。
 
-#### `audit-level`
+## `audit-level`
 
 - 默认值：空
 - 类型：null、“信息”、“低”、“中等”、“高”、“严重”或“无”
 
 `npm audit`以非零退出代码退出的最低漏洞级别。
 
-#### `before`
+## `before`
 
 - 默认值：空
 - 类型：空或日期
@@ -146,7 +147,7 @@ npm ls --global --parseable --long --loglevel info
 
 如果请求的版本是 a`dist-tag`并且给定的标签未通过`--before`过滤器，则将使用小于或等于该标签的最新版本。例如，即使是也`foo@latest`可能安装。`foo@1.2``latest``2.0`
 
-#### `bin-links`
+## `bin-links`
 
 - 默认值：true
 - 类型：布尔值
@@ -155,7 +156,7 @@ npm ls --global --parseable --long --loglevel info
 
 设置为 false 以使其不执行此操作。这可以用来解决某些文件系统不支持符号链接的问题，即使在表面上的 Unix 系统上也是如此。
 
-#### `browser`
+## `browser`
 
 - 默认：OS X：`"open"`、Windows：`"start"`、其他：`"xdg-open"`
 - 类型：null、布尔值或字符串
@@ -166,7 +167,7 @@ npm 命令调用的浏览器来打开网站。
 
 设置`true`为使用默认系统 URL 打开程序。
 
-#### `ca`
+## `ca`
 
 - 默认值：空
 - 类型：null或String（可设置多次）
@@ -188,21 +189,21 @@ ca[]="..."
 
 另请参阅`strict-ssl`配置。
 
-#### `cache`
+## `cache`
 
 - 默认：Windows：`%LocalAppData%\npm-cache`、Posix：`~/.npm`
 - 类型：路径
 
 npm 缓存目录的位置。看`npm cache`
 
-#### `cafile`
+## `cafile`
 
 - 默认值：空
 - 类型：路径
 
 包含一个或多个证书颁发机构签名证书的文件的路径。与设置类似`ca`，但允许多个 CA，以及将 CA 信息存储在磁盘上的文件中。
 
-#### `call`
+## `call`
 
 - 默认： ””
 - 类型：字符串
@@ -215,7 +216,7 @@ npm 缓存目录的位置。看`npm cache`
 npm exec --package yo --package generator-node --call "yo node"
 ```
 
-#### `cert`
+## `cert`
 
 - 默认值：空
 - 类型：null 或 String
@@ -230,35 +231,35 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 它不是*证书*文件的路径（并且没有“certfile”选项）。
 
-#### `ci-name`
+## `ci-name`
 
 - 默认值：当前 CI 系统的名称，或者`null`不在已知 CI 平台上时的名称。
 - 类型：null 或 String
 
 持续集成系统的名称。如果没有明确设置，npm 将使用该模块检测当前的 CI 环境`@npmcli/ci-detect`。
 
-#### `cidr`
+## `cidr`
 
 - 默认值：空
 - 类型：null或String（可设置多次）
 
 这是使用命令配置受限访问令牌时要使用的 CIDR 地址列表`npm token create`。
 
-#### `color`
+## `color`
 
 - 默认值：true，除非 NO_COLOR 环境设置为“0”以外的其他值
 - 类型：“始终”或布尔值
 
 如果为 false，则永远不会显示颜色。如果`"always"`那么总是显示颜色。如果为 true，则仅打印 tty 文件描述符的颜色代码。
 
-#### `commit-hooks`
+## `commit-hooks`
 
 - 默认值：true
 - 类型：布尔值
 
 使用`npm version`命令时运行 git commit hooks。
 
-#### `depth`
+## `depth`
 
 - 默认值：`Infinity`如果`--all`设置，否则`1`
 - 类型：空或数字
@@ -267,42 +268,42 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 如果未设置，`npm ls`将仅显示根项目的直接依赖项。如果`--all`设置了，npm 将默认显示所有依赖项。
 
-#### `description-1`
+## `description-1`
 
 - 默认值：true
 - 类型：布尔值
 
 显示描述于`npm search`
 
-#### `diff`
+## `diff`
 
 - 默认：
 - 类型：String（可设置多次）
 
 定义要在 中进行比较的参数`npm diff`。
 
-#### `diff-dst-prefix`
+## `diff-dst-prefix`
 
 - 默认值：“b/”
 - 类型：字符串
 
 输出中使用的目标前缀`npm diff`。
 
-#### `diff-ignore-all-space`
+## `diff-ignore-all-space`
 
 - 默认值：假
 - 类型：布尔值
 
 比较 中的行时忽略空格`npm diff`。
 
-#### `diff-name-only`
+## `diff-name-only`
 
 - 默认值：假
 - 类型：布尔值
 
 使用 时仅打印文件名`npm diff`。
 
-#### `diff-no-prefix`
+## `diff-no-prefix`
 
 - 默认值：假
 - 类型：布尔值
@@ -311,28 +312,28 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 注意：这会导致`npm diff`忽略`--diff-src-prefix`和`--diff-dst-prefix`配置。
 
-#### `diff-src-prefix`
+## `diff-src-prefix`
 
 - 默认值：“a/”
 - 类型：字符串
 
 输出中使用的源前缀`npm diff`。
 
-#### `diff-text`
+## `diff-text`
 
 - 默认值：假
 - 类型：布尔值
 
 将所有文件视为`npm diff`.
 
-#### `diff-unified`
+## `diff-unified`
 
 - 默认值：3
 - 类型：数字
 
 要在 中打印的上下文行数`npm diff`。
 
-#### `dry-run`
+## `dry-run`
 
 - 默认值：假
 - 类型：布尔值
@@ -341,14 +342,14 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 注意：其他网络相关命令不支持这一点，例如`dist-tags`、`owner`等。
 
-#### `editor`
+## `editor`
 
 - 默认值：EDITOR 或 VISUAL 环境变量，或 Windows 上的“notepad.exe”，或 Unix 系统上的“vim”
 - 类型：字符串
 
 `npm edit`为和运行的命令`npm config edit`。
 
-#### `engine-strict`
+## `engine-strict`
 
 - 默认值：假
 - 类型：布尔值
@@ -357,7 +358,7 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 这可以通过设置`--force`标志来覆盖。
 
-#### `fetch-retries`
+## `fetch-retries`
 
 - 默认值：2
 - 类型：数字
@@ -366,35 +367,35 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 在网络故障或 5xx HTTP 错误的情况下，npm 将重试对注册表的幂等读取请求。
 
-#### `fetch-retry-factor`
+## `fetch-retry-factor`
 
 - 默认值：10
 - 类型：数字
 
 `retry`获取包时模块使用的“因素”配置。
 
-#### `fetch-retry-maxtimeout`
+## `fetch-retry-maxtimeout`
 
 - 默认值：60000（1 分钟）
 - 类型：数字
 
 `retry`获取包时模块使用的“maxTimeout”配置。
 
-#### `fetch-retry-mintimeout`
+## `fetch-retry-mintimeout`
 
 - 默认值：10000（10 秒）
 - 类型：数字
 
 `retry`获取包时模块使用的“minTimeout”配置。
 
-#### `fetch-timeout`
+## `fetch-timeout`
 
 - 默认值：300000（5 分钟）
 - 类型：数字
 
 等待 HTTP 请求完成的最长时间。
 
-#### `force`
+## `force`
 
 - 默认值：假
 - 类型：布尔值
@@ -414,7 +415,7 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 如果您不清楚自己要做什么，强烈建议您不要使用此选项！
 
-#### `foreground-scripts`
+## `foreground-scripts`
 
 - 默认值：假
 - 类型：布尔值
@@ -423,35 +424,35 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 请注意，这通常会使安装运行速度变慢，并且噪音更大，但对于调试很有用。
 
-#### `format-package-lock`
+## `format-package-lock`
 
 - 默认值：true
 - 类型：布尔值
 
 格式化`package-lock.json`或`npm-shrinkwrap.json`作为人类可读的文件。
 
-#### `fund`
+## `fund`
 
 - 默认值：true
 - 类型：布尔值
 
 当“true”时，会在每个消息末尾显示消息`npm install`，确认寻求资金的依赖项的数量。`npm fund`详情请参阅。
 
-#### `git`
+## `git`
 
 - 默认值：“git”
 - 类型：字符串
 
 用于 git 命令的命令。如果 git 安装在计算机上，但不在 中`PATH`，则将其设置为 git 二进制文件的完整路径。
 
-#### `git-tag-version`
+## `git-tag-version`
 
 - 默认值：true
 - 类型：布尔值
 
 使用命令时标记提交`npm version`。
 
-#### `global`
+## `global`
 
 - 默认值：假
 - 类型：布尔值
@@ -462,42 +463,42 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 - bin 文件链接到`{prefix}/bin`
 - 手册页链接到`{prefix}/share/man`
 
-#### `global-style`
+## `global-style`
 
 - 默认值：假
 - 类型：布尔值
 
 使 npm 将包安装到本地`node_modules`文件夹中，其布局与全局文件夹使用的布局相同`node_modules`。只有您的直接依赖项才会显示，`node_modules`并且它们依赖的所有内容都将在其`node_modules`文件夹中展平。这显然会消除一些重复数据删除。如果与 一起使用`legacy-bundling`，`legacy-bundling`将是首选。
 
-#### `globalconfig`
+## `globalconfig`
 
 - 默认值：全局 --prefix 设置加上“etc/npmrc”。例如，“/usr/local/etc/npmrc”
 - 类型：路径
 
 要读取全局配置选项的配置文件。
 
-#### `heading`
+## `heading`
 
 - 默认值：“npm”
 - 类型：字符串
 
 启动所有调试日志输出的字符串。
 
-#### `https-proxy`
+## `https-proxy`
 
 - 默认值：空
 - 类型：null 或 URL
 
 用于传出 https 请求的代理。如果设置了`HTTPS_PROXY`或`https_proxy`或`HTTP_PROXY`或`http_proxy`环境变量，底层库将遵循代理设置`make-fetch-happen`。
 
-#### `if-present`
+## `if-present`
 
 - 默认值：假
 - 类型：布尔值
 
 `run-script`如果为 true，则当为未在`scripts`部分中定义的脚本调用npm 时，npm 将不会退出并显示错误代码`package.json`。当需要在脚本存在时选择性地运行脚本并在脚本失败时运行失败时，可以使用此选项。例如，当运行可能仅适用于其他通用 CI 设置中的某些构建的脚本时，这很有用。
 
-#### `ignore-scripts`
+## `ignore-scripts`
 
 - 默认值：假
 - 类型：布尔值
@@ -506,7 +507,7 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 请注意，明确旨在运行特定脚本的命令，例如`npm start`、`npm stop`、`npm restart`、`npm test`、 和如果设置了，`npm run-script`仍将运行其预期脚本，但它们*不会*运行任何前置或后置脚本。`ignore-scripts`
 
-#### `include`
+## `include`
 
 - 默认：
 - 类型：“prod”、“dev”、“可选”或“peer”（可以设置多次）
@@ -517,7 +518,7 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 `--include`无论在命令行上指定省略/包含的顺序如何，都不会省略 中指定的依赖关系类型。
 
-#### `include-staged`
+## `include-staged`
 
 - 默认值：假
 - 类型：布尔值
@@ -526,49 +527,49 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 这是实验性的，npm 公共注册表尚未实现。
 
-#### `init-author-email`
+## `init-author-email`
 
 - 默认： ””
 - 类型：字符串
 
 默认情况下，该值`npm init`应用于包作者的电子邮件。
 
-#### `init-author-name`
+## `init-author-name`
 
 - 默认： ””
 - 类型：字符串
 
 默认情况下，该值`npm init`应用于包作者的姓名。
 
-#### `init-author-url`
+## `init-author-url`
 
 - 默认： ””
 - 输入：“”或 URL
 
 默认情况下，该值`npm init`应用于包作者的主页。
 
-#### `init-license`
+## `init-license`
 
 - 默认值：“ISC”
 - 类型：字符串
 
 该值`npm init`应默认用于包许可证。
 
-#### `init-module`
+## `init-module`
 
 - 默认值：“~/.npm-init.js”
 - 类型：路径
 
 将由`npm init`命令加载的模块。有关更多信息，请参阅[init-package-json](https://github.com/npm/init-package-json)模块的文档，或[npm init](https://docs.npmjs.com/cli/v7/commands/npm-init)。
 
-#### `init-version`
+## `init-version`
 
 - 默认值：“1.0.0”
 - 类型：SemVer 字符串
 
 默认情况下应用于包版本号的值`npm init`（如果尚未在 package.json 中设置）。
 
-#### `json`
+## `json`
 
 - 默认值：假
 - 类型：布尔值
@@ -579,7 +580,7 @@ cert="-----BEGIN CERTIFICATE-----\nXXXX\nXXXX\n-----END CERTIFICATE-----"
 
 并非所有 npm 命令都支持。
 
-#### `key`
+## `key`
 
 - 默认值：空
 - 类型：null 或 String
@@ -592,14 +593,14 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 它不是*密钥*文件的路径（并且没有“keyfile”选项）。
 
-#### `legacy-bundling`
+## `legacy-bundling`
 
 - 默认值：假
 - 类型：布尔值
 
 使 npm 安装该软件包，以便 1.4 之前的 npm 版本（例如 Node 0.8 中包含的版本）可以安装该软件包。这消除了所有自动重复数据删除。如果与`global-style`此选项一起使用将是首选。
 
-#### `legacy-peer-deps`
+## `legacy-peer-deps`
 
 - 默认值：假
 - 类型：布尔值
@@ -612,28 +613,28 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 `legacy-peer-deps`不建议使用，因为它不会强制`peerDependencies`执行元依赖项可能依赖的契约。
 
-#### `link`
+## `link`
 
 - 默认值：假
 - 类型：布尔值
 
 与 一起使用`npm ls`，将输出限制为仅那些链接的包。
 
-#### `local-address`
+## `local-address`
 
 - 默认值：空
 - 类型：IP 地址
 
 连接到 npm 注册表时使用的本地接口的 IP 地址。在 0.12 之前的 Node 版本中必须是 IPv4。
 
-#### `location`
+## `location`
 
 - 默认值：“user”，除非`--global`传递，这也会将此值设置为“global”
 - 类型：“全局”、“用户”或“项目”
 
 当传递给`npm config`它时，它指的是要使用哪个配置文件。
 
-#### `loglevel`
+## `loglevel`
 
 - 默认值：“通知”
 - 类型：“silent”、“error”、“warn”、“notice”、“http”、“timing”、“info”、“verbose”或“silly”
@@ -644,28 +645,28 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 另请参阅`foreground-scripts`配置。
 
-#### `logs-max`
+## `logs-max`
 
 - 默认值：10
 - 类型：数字
 
 要存储的日志文件的最大数量。
 
-#### `long`
+## `long`
 
 - 默认值：假
 - 类型：布尔值
 
 显示`ls`、`search`、 和中的扩展信息`help-search`。
 
-#### `maxsockets`
+## `maxsockets`
 
 - 默认值：15
 - 类型：数字
 
 每个源使用的最大连接数（协议/主机/端口组合）。
 
-#### `message`
+## `message`
 
 - 默认值：“%s”
 - 类型：字符串
@@ -674,21 +675,21 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 消息中的任何“%s”都将替换为版本号。
 
-#### `node-options`
+## `node-options`
 
 - 默认值：空
 - 类型：null 或 String
 
 通过环境变量传递到 Node.js 的选项`NODE_OPTIONS`。这不会影响 npm 本身的执行方式，但会影响生命周期脚本的调用方式。
 
-#### `node-version`
+## `node-version`
 
 - 默认值：Node.js`process.version`值
 - 类型：SemVer 字符串
 
 检查包的`engines`设置时使用的节点版本。
 
-#### `noproxy`
+## `noproxy`
 
 - 默认值：NO_PROXY 环境变量的值
 - 类型：String（可设置多次）
@@ -697,21 +698,21 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 还接受逗号分隔的字符串。
 
-#### `npm-version`
+## `npm-version`
 
 - 默认值：输出`npm --version`
 - 类型：SemVer 字符串
 
 检查包`engines`设置时使用的 npm 版本。
 
-#### `offline`
+## `offline`
 
 - 默认值：假
 - 类型：布尔值
 
 强制离线模式：安装期间不会执行任何网络请求。要允许 CLI 填充缺失的缓存数据，请参阅`--prefer-offline`。
 
-#### `omit`
+## `omit`
 
 - 默认值：如果`NODE_ENV`环境变量设置为“生产”，则为“dev”，否则为空。
 - 类型：“dev”、“可选”或“peer”（可以设置多次）
@@ -724,7 +725,7 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 如果生成的省略列表包含`'dev'`，则所有生命周期脚本的`NODE_ENV`环境变量将设置为。`'production'`
 
-#### `otp`
+## `otp`
 
 - 默认值：空
 - 类型：null 或 String
@@ -733,21 +734,21 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 如果未设置，并且注册表响应因询问一次性密码而失败，则 npm 将在命令行上提示输入密码。
 
-#### `pack-destination`
+## `pack-destination`
 
 - 默认： ”。”
 - 类型：字符串
 
 将保存 tarball 的目录`npm pack`。
 
-#### `package`
+## `package`
 
 - 默认：
 - 类型：String（可设置多次）
 
 要安装的包`npm exec`
 
-#### `package-lock`
+## `package-lock`
 
 - 默认值：true
 - 类型：布尔值
@@ -756,7 +757,7 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 当包包锁被禁用时，无关模块的自动修剪也将被禁用。要删除禁用包锁的无关模块，请使用`npm prune`.
 
-#### `package-lock-only`
+## `package-lock-only`
 
 - 默认值：假
 - 类型：布尔值
@@ -767,42 +768,42 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 这意味着`list`输出将基于 描述的树`package-lock.json`，而不是 的内容`node_modules`。
 
-#### `parseable`
+## `parseable`
 
 - 默认值：假
 - 类型：布尔值
 
 写入标准输出的命令输出可解析的结果。对于`npm search`，这将是制表符分隔的表格格式。
 
-#### `prefer-offline`
+## `prefer-offline`
 
 - 默认值：假
 - 类型：布尔值
 
 如果为 true，则将绕过缓存数据的过时检查，但将从服务器请求丢失的数据。要强制完全离线模式，请使用`--offline`.
 
-#### `prefer-online`
+## `prefer-online`
 
 - 默认值：假
 - 类型：布尔值
 
 如果为 true，将强制对缓存数据进行过时检查，使 CLI 立即查找更新，即使是新的包数据也是如此。
 
-#### `prefix`
+## `prefix`
 
 - 默认值：在全局模式下，安装节点可执行文件的文件夹。在本地模式下，包含 package.json 文件或 node_modules 文件夹的最近父文件夹。
 - 类型：路径
 
 安装全局项目的位置。如果在命令行上设置，则会强制非全局命令在指定文件夹中运行。
 
-#### `preid`
+## `preid`
 
 - 默认： ””
 - 类型：字符串
 
 用作 semver 的“预发布”部分前缀的“预发布标识符”。就像`rc`在`1.2.0-rc.8`.
 
-#### `progress`
+## `progress`
 
 - 默认值：`true`除非在已知的 CI 系统中运行
 - 类型：布尔值
@@ -811,35 +812,35 @@ key="-----BEGIN PRIVATE KEY-----\nXXXX\nXXXX\n-----END PRIVATE KEY-----"
 
 设置`false`为抑制进度条。
 
-#### `proxy`
+## `proxy`
 
 - 默认值：空
 - 类型：null、false 或 URL
 
 用于传出 http 请求的代理。如果设置了`HTTP_PROXY`或`http_proxy`环境变量，底层库将遵循代理设置`request`。
 
-#### `read-only`
+## `read-only`
 
 - 默认值：假
 - 类型：布尔值
 
 这用于在使用命令配置受限访问令牌时将令牌标记为无法发布`npm token create`。
 
-#### `rebuild-bundle`
+## `rebuild-bundle`
 
 - 默认值：true
 - 类型：布尔值
 
 安装后重建捆绑的依赖项。
 
-#### `registry`
+## `registry`
 
 - 默认值：“ https://registry.npmjs.org/ ”
 - 类型： 网址
 
 npm 注册表的基本 URL。
 
-#### `save`
+## `save`
 
 - 默认值：true
 - 类型：布尔值
@@ -848,7 +849,7 @@ npm 注册表的基本 URL。
 
 与该`npm rm`命令一起使用时，从 package.json 中删除依赖项。
 
-#### `save-bundle`
+## `save-bundle`
 
 - 默认值：假
 - 类型：布尔值
@@ -857,35 +858,35 @@ npm 注册表的基本 URL。
 
 如果`--save-peer`已设置，请忽略，因为无法捆绑peerDependency。
 
-#### `save-dev`
+## `save-dev`
 
 - 默认值：假
 - 类型：布尔值
 
 将已安装的包保存到 package.json 文件中，命名为`devDependencies`.
 
-#### `save-exact`
+## `save-exact`
 
 - 默认值：假
 - 类型：布尔值
 
 保存到 package.json 的依赖项将使用精确的版本进行配置，而不是使用 npm 的默认 semver 范围运算符。
 
-#### `save-optional`
+## `save-optional`
 
 - 默认值：假
 - 类型：布尔值
 
 将已安装的包保存到 package.json 文件中，命名为`optionalDependencies`.
 
-#### `save-peer`
+## `save-peer`
 
 - 默认值：假
 - 类型：布尔值
 
 保存已安装的软件包。到 package.json 文件作为`peerDependencies`
 
-#### `save-prefix`
+## `save-prefix`
 
 - 默认值：“^”
 - 类型：字符串
@@ -894,7 +895,7 @@ npm 注册表的基本 URL。
 
 例如，如果某个软件包具有 version `1.2.3`，则默认情况下其版本设置为`^1.2.3`允许对该软件包进行小幅升级，但之后`npm config set save-prefix='~'`将设置为`~1.2.3`仅允许补丁升级。
 
-#### `save-prod`
+## `save-prod`
 
 - 默认值：假
 - 类型：布尔值
@@ -903,7 +904,7 @@ npm 注册表的基本 URL。
 
 如果为 true，则这是默认行为`--save`，并且`--save-dev`或都不`--save-optional`为 true。
 
-#### `scope`
+## `scope`
 
 - 默认值：当前项目的范围（如果有）或“”
 - 类型：字符串
@@ -934,49 +935,49 @@ npm logout --scope=@mycorp
 npm init --scope=@foo --yes
 ```
 
-#### `script-shell`
+## `script-shell`
 
 - 默认值：POSIX 系统上为“/bin/sh”，Windows 上为“cmd.exe”
 - 类型：null 或 String
 
 用于通过`npm exec`,`npm run`和`npm init <pkg>`命令运行脚本的 shell。
 
-#### `searchexclude`
+## `searchexclude`
 
 - 默认： ””
 - 类型：字符串
 
 以空格分隔的选项限制搜索结果。
 
-#### `searchlimit`
+## `searchlimit`
 
 - 默认值：20
 - 类型：数字
 
 限制搜索结果的项目数。根本不适用于遗留搜索。
 
-#### `searchopts`
+## `searchopts`
 
 - 默认： ””
 - 类型：字符串
 
 始终传递给搜索的空格分隔选项。
 
-#### `searchstaleness`
+## `searchstaleness`
 
 - 默认值：900
 - 类型：数字
 
 如果使用旧版搜索端点，则在发出另一个注册表请求之前的缓存寿命（以秒为单位）。
 
-#### `shell`
+## `shell`
 
 - 默认值：SHELL 环境变量，或 Posix 上的“bash”，或 Windows 上的“cmd.exe”
 - 类型：字符串
 
 为命令运行的 shell `npm explore`。
 
-#### `sign-git-commit`
+## `sign-git-commit`
 
 - 默认值：假
 - 类型：布尔值
@@ -985,7 +986,7 @@ npm init --scope=@foo --yes
 
 请注意，git 要求您在 git 配置中设置 GPG 密钥才能正常工作。
 
-#### `sign-git-tag`
+## `sign-git-tag`
 
 - 默认值：假
 - 类型：布尔值
@@ -994,7 +995,7 @@ npm init --scope=@foo --yes
 
 请注意，git 要求您在 git 配置中设置 GPG 密钥才能正常工作。
 
-#### `strict-peer-deps`
+## `strict-peer-deps`
 
 - 默认值：假
 - 类型：布尔值
@@ -1005,7 +1006,7 @@ npm init --scope=@foo --yes
 
 当执行此类和覆盖时，会打印一条警告，解释冲突和涉及的包。如果`--strict-peer-deps`设置了，则此警告将被视为失败。
 
-#### `strict-ssl`
+## `strict-ssl`
 
 - 默认值：true
 - 类型：布尔值
@@ -1014,7 +1015,7 @@ npm init --scope=@foo --yes
 
 另请参阅`ca`配置。
 
-#### `tag`
+## `tag`
 
 - 默认值：“最新”
 - 类型：字符串
@@ -1025,7 +1026,7 @@ npm init --scope=@foo --yes
 
 当由命令使用时`npm diff`，这是用于获取默认情况下将与本地文件进行比较的 tarball 的标签。
 
-#### `tag-version-prefix`
+## `tag-version-prefix`
 
 - Default: "v"
 - 类型：字符串
@@ -1034,7 +1035,7 @@ npm init --scope=@foo --yes
 
 由于其他工具可能依赖于 npm 版本标记的约定`v1.0.0`，*因此仅在绝对必要时才使用此属性*。特别是，在覆盖公共包的此设置时要小心。
 
-#### `timing`
+## `timing`
 
 - 默认值：假
 - 类型：布尔值
@@ -1043,7 +1044,7 @@ npm init --scope=@foo --yes
 
 [您可以使用以下json](https://npm.im/json)命令行快速查看它： `npm exec -- json -g < ~/.npm/_timing.json`。
 
-#### `umask`
+## `umask`
 
 - 默认值：0
 - 类型：八进制数字字符串，范围 0000..0777 (0..511)
@@ -1056,28 +1057,28 @@ npm init --scope=@foo --yes
 
 因此，大多数 POSIX 系统上的有效默认 umask 值为 0o22，这意味着文件夹和可执行文件使用 0o755 模式创建，其他文件使用 0o644 模式创建。
 
-#### `unicode`
+## `unicode`
 
 - `LC_ALL`默认值：在 Windows 上为 false，在具有 unicode 语言环境的 mac/unix 系统上为 true，由、`LC_CTYPE`或环境变量定义`LANG`。
 - 类型：布尔值
 
 当设置为 true 时，npm 在树输出中使用 unicode 字符。当为 false 时，它使用 ascii 字符而不是 unicode 字形。
 
-#### `update-notifier`
+## `update-notifier`
 
 - 默认值：true
 - 类型：布尔值
 
 设置为 false 可以在使用比最新版本更旧的 npm 时抑制更新通知。
 
-#### `usage`
+## `usage`
 
 - 默认值：假
 - 类型：布尔值
 
 显示有关指定命令的简短用法输出。
 
-#### `user-agent`
+## `user-agent`
 
 - 默认值：“npm/{npm-version} 节点/{node-version} {platform} {arch} 工作区/{workspaces} {ci}”
 - 类型：字符串
@@ -1091,7 +1092,7 @@ npm init --scope=@foo --yes
 - `{workspaces}`-`true`如果设置了`workspaces`或`workspace`选项，则设置为。
 - `{ci}`- 配置的值`ci-name`（如果已设置）前缀为`ci/`，如果为空则为空字符串`ci-name`。
 
-#### `userconfig`
+## `userconfig`
 
 - 默认值：“~/.npmrc”
 - 类型：路径
@@ -1100,7 +1101,7 @@ npm init --scope=@foo --yes
 
 这可能会被`npm_config_userconfig`环境变量或`--userconfig`命令行选项覆盖，但可能*不会*被`globalconfig`文件中的设置覆盖。
 
-#### `version`
+## `version`
 
 - 默认值：假
 - 类型：布尔值
@@ -1109,7 +1110,7 @@ npm init --scope=@foo --yes
 
 仅当在命令行上明确指定时才相关。
 
-#### `versions`
+## `versions`
 
 - 默认值：假
 - 类型：布尔值
@@ -1118,7 +1119,7 @@ npm init --scope=@foo --yes
 
 仅当在命令行上明确指定时才相关。
 
-#### `viewer`
+## `viewer`
 
 - 默认值：Posix 上为“man”，Windows 上为“browser”
 - 类型：字符串
@@ -1127,14 +1128,14 @@ npm init --scope=@foo --yes
 
 设置为`"browser"`在默认 Web 浏览器中查看 html 帮助内容。
 
-#### `which`
+## `which`
 
 - 默认值：空
 - 类型：空或数字
 
 如果有多个资金来源，则打开其中1索引的来源URL。
 
-#### `workspace`
+## `workspace`
 
 - 默认：
 - 类型：String（可设置多次）
@@ -1151,7 +1152,7 @@ npm init --scope=@foo --yes
 
 该值不会导出到子进程的环境中。
 
-#### `workspaces`
+## `workspaces`
 
 - 默认值：假
 - 类型：布尔值
@@ -1160,14 +1161,14 @@ npm init --scope=@foo --yes
 
 该值不会导出到子进程的环境中。
 
-#### `yes`
+## `yes`
 
 - 默认值：空
 - 类型：空或布尔值
 
 对 npm 可能在命令行上打印的任何提示自动回答“是”。
 
-#### `also`
+## `also`
 
 - 默认值：空
 - 类型：null、“dev”或“development”
@@ -1175,7 +1176,7 @@ npm init --scope=@foo --yes
 
 当设置为`dev`或 时`development`，这是 的别名`--include=dev`。
 
-#### `auth-type`
+## `auth-type`
 
 - 默认值：“旧版”
 - 类型：“legacy”、“sso”、“saml”或“oauth”
@@ -1183,7 +1184,7 @@ npm init --scope=@foo --yes
 
 `adduser`/使用什么身份验证策略`login`。
 
-#### `cache-max`
+## `cache-max`
 
 - 默认值：无穷大
 - 类型：数字
@@ -1193,7 +1194,7 @@ npm init --scope=@foo --yes
 
 
 
-#### `cache-min`
+## `cache-min`
 
 - 默认值：0
 - 类型：数字
@@ -1201,7 +1202,7 @@ npm init --scope=@foo --yes
 
 `--cache-min=9999 (or bigger)`是 的别名`--prefer-offline`。
 
-#### `dev`
+## `dev`
 
 - 默认值：假
 - 类型：布尔值
@@ -1209,7 +1210,7 @@ npm init --scope=@foo --yes
 
 别名为`--include=dev`.
 
-#### `initauthoremail`
+## `initauthoremail`
 
 - 默认： ””
 - 类型：字符串
@@ -1217,7 +1218,7 @@ npm init --scope=@foo --yes
 
 别名为`--init-author-email`
 
-#### `initauthorname`
+## `initauthorname`
 
 - 默认： ””
 - 类型：字符串
@@ -1225,7 +1226,7 @@ npm init --scope=@foo --yes
 
 别名为`--init-author-name`
 
-#### `initauthorurl`
+## `initauthorurl`
 
 - 默认： ””
 - 输入：“”或 URL
@@ -1233,7 +1234,7 @@ npm init --scope=@foo --yes
 
 别名为`--init-author-url`
 
-#### `initlicense`
+## `initlicense`
 
 - 默认值：“ISC”
 - 类型：字符串
@@ -1241,7 +1242,7 @@ npm init --scope=@foo --yes
 
 别名为`--init-license`
 
-#### `initmodule`
+## `initmodule`
 
 - 默认值：“~/.npm-init.js”
 - 类型：路径
@@ -1249,7 +1250,7 @@ npm init --scope=@foo --yes
 
 别名为`--init-module`
 
-#### `initversion`
+## `initversion`
 
 - 默认值：“1.0.0”
 - 类型：SemVer 字符串
@@ -1257,7 +1258,7 @@ npm init --scope=@foo --yes
 
 别名为`--init-version`
 
-#### `only`
+## `only`
 
 - 默认值：空
 - 类型：null、“prod”或“生产”
@@ -1265,7 +1266,7 @@ npm init --scope=@foo --yes
 
 当设置为`prod`或 时`production`，这是 的别名`--omit=dev`。
 
-#### `optional`
+## `optional`
 
 - 默认值：空
 - 类型：空或布尔值
@@ -1275,7 +1276,7 @@ npm init --scope=@foo --yes
 
 --include=可选 或 --omit=可选 的别名
 
-#### `production`
+## `production`
 
 - 默认值：空
 - 类型：空或布尔值
@@ -1283,7 +1284,7 @@ npm init --scope=@foo --yes
 
 别名为`--omit=dev`
 
-#### `shrinkwrap`
+## `shrinkwrap`
 
 - 默认值：true
 - 类型：布尔值
@@ -1291,7 +1292,7 @@ npm init --scope=@foo --yes
 
 --package-lock 的别名
 
-#### `sso-poll-frequency`
+## `sso-poll-frequency`
 
 - 默认值：500
 - 类型：数字
@@ -1299,7 +1300,7 @@ npm init --scope=@foo --yes
 
 当与启用 SSO 的`auth-type`s 一起使用时，配置在用户完成身份验证时轮询注册表的频率。
 
-#### `sso-type`
+## `sso-type`
 
 - 默认值：“oauth”
 - 类型：null、“oauth”或“saml”
@@ -1307,7 +1308,7 @@ npm init --scope=@foo --yes
 
 如果`--auth-type=sso`，则为要使用的 SSO 类型。
 
-#### `tmp`
+## `tmp`
 
 - `os.tmpdir()`默认值：Node.js方法返回的值https://nodejs.org/api/os.html#os_os_tmpdir
 - 类型：路径

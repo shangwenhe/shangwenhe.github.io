@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 
 
@@ -6,7 +6,7 @@
 npm start [-- <args>]
 ```
 
-### `description`
+## 描述
 
 This runs a predefined command specified in the `"start"` property of a package's `"scripts"` object.
 
@@ -16,7 +16,7 @@ Note that this is different from the default node behavior of running the file s
 
 As of `npm@2.0.0`](https://blog.npmjs.org/post/98131109725/npm-2-0-0), you can use custom arguments when executing scripts. Refer to [`npm run-script` for more details.
 
-### `example`
+## `example`
 
 
 
@@ -39,9 +39,9 @@ npm start
 (foo.js output would be here)
 ```
 
-### `configuration`
+## `configuration`
 
-#### `ignore-scripts`
+## `ignore-scripts`
 
 - Default: false
 - Type: Boolean
@@ -50,7 +50,7 @@ If true, npm does not run scripts specified in package.json files.
 
 Note that commands explicitly intended to run a particular script, such as `npm start`, `npm stop`, `npm restart`, `npm test`, and `npm run-script` will still run their intended script if `ignore-scripts` is set, but they will *not* run any pre- or post-scripts.
 
-#### `script-shell`
+## `script-shell`
 
 - Default: '/bin/sh' on POSIX systems, 'cmd.exe' on Windows
 - Type: null or String

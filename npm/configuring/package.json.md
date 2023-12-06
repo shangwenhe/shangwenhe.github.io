@@ -1,10 +1,10 @@
-### description
+## package.json 描述
 
 本文档是您需要了解的有关 package.json 文件中所需内容的全部内容。它必须是实际的 JSON，而不仅仅是 JavaScript 对象文字。
 
 本文档中描述的许多行为都受到 中描述的配置设置的影响`config`。
 
-### name
+## name
 
 如果您计划发布包，则package.json 中*最重要的内容是名称和版本字段，因为它们是必需的。*名称和版本一起形成一个标识符，假定该标识符是完全唯一的。对包的更改应该伴随着对版本的更改。如果您不打算发布包，则名称和版本字段是可选的。
 
@@ -26,21 +26,21 @@
 
 名称可以选择以范围为前缀，例如`@myorg/mypackage`。`scope`详情请参阅。
 
-### version
+## version
 
 如果您计划发布包，则package.json 中*最重要的内容是名称和版本字段，因为它们是必需的。*名称和版本一起形成一个标识符，假定该标识符是完全唯一的。对包的更改应该伴随着对版本的更改。如果您不打算发布包，则名称和版本字段是可选的。
 
 版本必须可由[node-semver](https://github.com/npm/node-semver)解析，它作为依赖项与 npm 捆绑在一起。（`npm install semver`自己使用它。）
 
-### description-1
+## description-1
 
 在其中添加描述。这是一个字符串。这可以帮助人们发现您的软件包，如 中所列`npm search`。
 
-### keywords
+## keywords
 
 把关键词放进去。它是一个字符串数组。这可以帮助人们发现您的包裹，因为它在 中列出`npm search`。
 
-### homepage
+## homepage
 
 项目主页的 url。
 
@@ -50,7 +50,7 @@
 "homepage": "https://github.com/owner/project#readme"
 ```
 
-### bugs
+## bugs
 
 项目问题跟踪器的 URL 和/或应向其报告问题的电子邮件地址。这些对于遇到包裹问题的人很有帮助。
 
@@ -67,7 +67,7 @@
 
 如果提供了 url，命令将使用它`npm bugs`。
 
-### license
+## license
 
 您应该为您的软件包指定一个许可证，以便人们知道如何允许他们使用它，以及您对其施加的任何限制。
 
@@ -155,7 +155,7 @@
 
 还要考虑设置`"private": true`以防止意外发布。
 
-### people fields: author, contributors
+## people fields: author, contributors
 
 “作者”是一个人。“贡献者”是一群人。“person”是一个带有“name”字段以及可选的“url”和“email”的对象，如下所示：
 
@@ -183,7 +183,7 @@
 
 npm 还使用您的 npm 用户信息设置顶级“维护者”字段。
 
-### funding
+## funding
 
 您可以指定一个包含 URL 的对象，该 URL 提供有关帮助资助包开发的方法的最新信息、字符串 URL 或以下数组：
 
@@ -219,7 +219,7 @@ npm 还使用您的 npm 用户信息设置顶级“维护者”字段。
 
 用户可以使用`npm fund`子命令列出`funding`其项目的所有依赖项的 URL（直接和间接）。提供项目名称时还可以使用访问每个融资网址的快捷方式，例如：（`npm fund <projectname>`当有多个网址时，将访问第一个）
 
-### files
+## files
 
 可选`files`字段是一个文件模式数组，描述当您的包作为依赖项安装时要包含的条目。文件模式遵循与 类似的语法`.gitignore`，但相反：包含文件、目录或 glob 模式（`*`、`**/*`等）将使文件在打包时包含在 tarball 中。省略该字段将使其默认为`["*"]`，这意味着它将包含所有文件。
 
@@ -256,7 +256,7 @@ npm 还使用您的 npm 用户信息设置顶级“维护者”字段。
 - `*.orig`
 - `package-lock.json`（`npm-shrinkwrap.json`如果您希望发布，请使用）
 
-### main
+## main
 
 main 字段是模块 ID，它是程序的主要入口点。也就是说，如果您的包名为`foo`，并且用户安装了它，然后执行`require("foo")`，则将返回主模块的导出对象。
 
@@ -266,11 +266,11 @@ main 字段是模块 ID，它是程序的主要入口点。也就是说，如果
 
 如果`main`未设置，则默认位于`index.js`包根文件夹中。
 
-### browser
+## browser
 
 如果您的模块打算在客户端使用，则应使用浏览器字段而不是主字段。这有助于提示用户它可能依赖于 Node.js 模块中不可用的原语。（例如`window`）
 
-### bin
+## bin
 
 许多软件包都有一个或多个可执行文件，它们希望将其安装到 PATH 中。npm 使这变得非常简单（事实上，它使用此功能来安装“npm”可执行文件。）
 
@@ -318,7 +318,7 @@ directoriesbin设置可执行文件。
 
 有关可执行文件的更多信息，请参阅executables
 
-### man
+## man
 
 指定要放置的单个文件或文件名数组以供`man`程序查找。
 
@@ -366,23 +366,23 @@ Man 文件必须以数字结尾，`.gz`如果被压缩，还可以选择后缀�
 
 将为`man foo`和创建条目`man 2 foo`
 
-### directories
+## directories
 
 CommonJS [Packages](http://wiki.commonjs.org/wiki/Packages/1.0)规范详细介绍了几种使用对象指示包结构的方法`directories`。如果你查看[npm 的 package.json](https://registry.npmjs.org/npm/latest)，你会发现它有 doc、lib 和 man 目录。
 
 将来，这些信息可能会以其他创造性的方式使用。
 
-#### directoriesbin
+## directoriesbin
 
 `bin`如果您在 中指定目录`directories.bin`，则将添加该文件夹中的所有文件。
 
 由于该`bin`指令的工作方式，同时指定`bin`路径和设置`directories.bin`是错误的。如果要指定单个文件，请使用`bin`，对于现有目录中的所有文件`bin`，请使用`directories.bin`。
 
-#### directoriesman
+## directoriesman
 
 一个充满手册页的文件夹。Sugar 通过遍历文件夹来生成“man”数组。
 
-### repository
+## repository
 
 指定您的代码所在的位置。这对于想要做出贡献的人很有帮助。如果 git 存储库位于 GitHub 上，那么该`npm docs`命令将能够找到您。
 
@@ -433,13 +433,13 @@ CommonJS [Packages](http://wiki.commonjs.org/wiki/Packages/1.0)规范详细介�
 }
 ```
 
-### scripts
+## scripts
 
 “scripts”属性是一个字典，其中包含在包生命周期中不同时间运行的脚本命令。键是生命周期事件，值是在该点运行的命令。
 
 请参阅`scripts`参考资料 了解有关编写包脚本的更多信息。
 
-### config
+## config
 
 “config”对象可用于设置在升级过程中持续存在的包脚本中使用的配置参数。例如，如果一个包具有以下内容：
 
@@ -456,7 +456,7 @@ CommonJS [Packages](http://wiki.commonjs.org/wiki/Packages/1.0)规范详细介�
 
 它还可以有一个引用`npm_package_config_port`环境变量的“启动”命令。
 
-### dependencies
+## dependencies
 
 依赖关系在一个简单的对象中指定，该对象将包名称映射到版本范围。版本范围是一个字符串，具有一个或多个以空格分隔的描述符。还可以使用 tarball 或 git URL 来标识依赖关系。
 
@@ -505,13 +505,13 @@ CommonJS [Packages](http://wiki.commonjs.org/wiki/Packages/1.0)规范详细介�
 }
 ```
 
-#### urls-as-dependencies
+## urls-as-dependencies
 
 您可以指定 tarball URL 来代替版本范围。
 
 该 tarball 将在安装时下载并本地安装到您的软件包中。
 
-#### git-urls-as-dependencies
+## git-urls-as-dependencies
 
 Git url 的形式如下：
 
@@ -532,7 +532,7 @@ git+https://isaacs@github.com/npm/cli.git
 git://github.com/npm/cli.git #v1.0.27
 ```
 
-#### github-urls
+## github-urls
 
 从版本 1.1.65 开始，您可以将 GitHub url 引用为“foo”：“user/foo-project”。就像 git URL 一样，`commit-ish`可以包含后缀。例如：
 
@@ -550,7 +550,7 @@ git://github.com/npm/cli.git #v1.0.27
 }
 ```
 
-#### local-paths
+## local-paths
 
 从版本 2.0.0 开始，您可以提供包含包的本地目录的路径。可以使用`npm install -S`或来保存本地路径`npm install --save`，使用以下任意形式：
 
@@ -578,7 +578,7 @@ git://github.com/npm/cli.git #v1.0.27
 
 此功能对于本地离线开发和创建需要 npm 安装（您不想访问外部服务器）的测试很有帮助，但在将包发布到公共注册表时不应使用。
 
-### devdependencies
+## devdependencies
 
 如果有人计划在他们的程序中下载和使用您的模块，那么他们可能不想或不需要下载和构建您使用的外部测试或文档框架。
 
@@ -609,7 +609,7 @@ git://github.com/npm/cli.git #v1.0.27
 
 该`prepare`脚本将在发布之前运行，以便用户可以使用该功能，而无需自己编译。在开发模式（即本地运行`npm install`）下，它也会运行此脚本，以便您可以轻松测试它。
 
-### peerdependencies
+## peerdependencies
 
 在某些情况下，您希望表达包与主机工具或库的兼容性，但不一定要对此`require`主机进行操作。这通常称为*插件*。值得注意的是，您的模块可能会公开主机文档预期和指定的特定接口。
 
@@ -642,7 +642,7 @@ git://github.com/npm/cli.git #v1.0.27
 
 假设主机符合[semver](https://semver.org/)，只有主机包的主要版本的更改才会破坏您的插件。因此，如果您使用过主机包的每个 1.x 版本，请使用`"^1.0"`或`"1.x"`来表达这一点。如果您依赖 1.5.2 中引入的功能，请使用`"^1.5.2"`.
 
-### peerDependenciesMeta
+## peerDependenciesMeta
 
 当用户安装您的软件包时，如果`peerDependencies`尚未安装中指定的软件包，npm 将发出警告。该`peerDependenciesMeta`字段用于向 npm 提供有关如何使用对等依赖项的更多信息。具体来说，它允许将对等依赖关系标记为可选。
 
@@ -668,7 +668,7 @@ git://github.com/npm/cli.git #v1.0.27
 
 `soy-milk`将对等依赖项标记为可选可确保如果主机上未安装软件包，npm 不会发出警告。这允许您集成各种主机包并与之交互，而无需安装所有这些包。
 
-### bundledDependencies
+## bundledDependencies
 
 这定义了发布包时将捆绑的包名称数组。
 
@@ -692,7 +692,7 @@ git://github.com/npm/cli.git #v1.0.27
 
 如果这是拼写的话`"bundleDependencies"`，那也是荣幸的。
 
-### optionalDependencies
+## optionalDependencies
 
 如果可以使用依赖项，但您希望 npm 在找不到或安装失败时继续进行，那么您可以将其放入对象中`optionalDependencies`。这是包名称到版本或 url 的映射，就像`dependencies`对象一样。不同之处在于构建失败不会导致安装失败。运行`npm install --no-optional`将阻止安装这些依赖项。
 
@@ -720,7 +720,7 @@ if (foo) {
 
 中的条目`optionalDependencies`将覆盖 中的同名条目`dependencies`，因此通常最好只放在一个位置。
 
-### engines
+## engines
 
 您可以指定您的东西适用的节点版本：
 
@@ -746,7 +746,7 @@ if (foo) {
 
 除非用户设置了`engine-strict`配置标志，否则此字段仅供参考，并且仅在您的软件包作为依赖项安装时才会产生警告。
 
-### os
+## os
 
 您可以指定您的模块将在哪些操作系统上运行：
 
@@ -768,7 +768,7 @@ if (foo) {
 
 允许阻止和允许某个项目，尽管没有任何充分的理由这样做。
 
-### cpu
+## cpu
 
 如果您的代码仅在某些 cpu 架构上运行，您可以指定哪些架构。
 
@@ -790,19 +790,19 @@ if (foo) {
 
 主机架构由以下因素决定`process.arch`
 
-### private
+## private
 
 如果你`"private": true`在 package.json 中设置，那么 npm 将拒绝发布它。
 
 这是防止意外发布私人存储库的一种方法。如果您想确保给定的包仅发布到特定注册表（例如内部注册表），请使用下面描述的字典在发布时`publishConfig`覆盖配置参数。`registry`
 
-### publishconfig
+## publishconfig
 
 这是一组将在发布时使用的配置值。如果您想要设置标签、注册表或访问权限，那么它特别方便，这样您就可以确保给定的包没有被标记为“最新”、发布到全局公共注册表或默认情况下范围模块是私有的。
 
 请`config`参阅查看可以覆盖的配置选项列表。
 
-### workspaces
+## workspaces
 
 可选`workspaces`字段是一个文件模式数组，用于描述安装客户端应查找的本地文件系统中的位置，以找到需要符号链接到顶级文件夹的每个[工作区](https://docs.npmjs.com/cli/v7/using-npm/workspaces)`node_modules`。
 
@@ -821,7 +821,7 @@ if (foo) {
 
 请参阅`workspaces`参考资料 获取更多示例。
 
-### default-values
+## default-values
 
 npm 将根据包内容默认一些值。
 

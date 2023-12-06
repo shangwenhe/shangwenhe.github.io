@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 
 
@@ -9,7 +9,7 @@ Publishes '.' if no argument supplied
 Sets tag 'latest' if no --tag specified
 ```
 
-### `description`
+## 描述
 
 将软件包发布到注册表，以便可以按名称安装。
 
@@ -32,7 +32,7 @@ Sets tag 'latest' if no --tag specified
 
 与`--dry-run`see类似`npm pack`，它会找出要包含的文件并将它们打包到 tarball 中以上传到注册表。
 
-### `files-included-in-package`
+## `files-included-in-package`
 
 要查看包中将包含哪些内容，请运行`npx npm-packlist`. 默认情况下包含所有文件，但以下情况除外：
 
@@ -50,9 +50,9 @@ Sets tag 'latest' if no --tag specified
 
 `developers`有关已发布的包中包含的内容的完整详细信息，以及有关如何构建该包的详细信息，请参阅参考资料。
 
-### `configuration`
+## `configuration`
 
-#### `tag`
+## `tag`
 
 - Default: "latest"
 - Type: String
@@ -63,7 +63,7 @@ Sets tag 'latest' if no --tag specified
 
 当由命令使用时`npm diff`，这是用于获取默认情况下将与本地文件进行比较的 tarball 的标签。
 
-#### `access`
+## `access`
 
 - 默认值：  'restricted' for scoped packages, 'public' for unscoped packages “restricted”适用于有作用域的包，“public”适用于无作用域的包
 - 类型：null、“受限”或“公共”
@@ -72,7 +72,7 @@ Sets tag 'latest' if no --tag specified
 
 注意：在命令`--access`上使用标志`npm publish`只会在包的初始发布时设置包访问级别。使用该标志的任何后续`npm publish`命令都`--access`不会影响访问级别。要在初始发布使用后更改访问级别`npm access`。
 
-#### `dry-run`
+## `dry-run`
 
 - 默认值：假
 - 类型：布尔值
@@ -81,7 +81,7 @@ Sets tag 'latest' if no --tag specified
 
 注意：其他网络相关命令不支持这一点，例如`dist-tags`、`owner`等。
 
-#### `otp`
+## `otp`
 
 - Default: null
 - Type: null or String
@@ -90,7 +90,7 @@ Sets tag 'latest' if no --tag specified
 
 如果未设置，并且注册表响应因询问一次性密码而失败，则 npm 将在命令行上提示输入密码。
 
-#### `workspace`
+## `workspace`
 
 - 默认：
 - 类型：String（可设置多次）
@@ -107,7 +107,7 @@ Sets tag 'latest' if no --tag specified
 
 该值不会导出到子进程的环境中。
 
-#### `workspaces`
+## `workspaces`
 
 - 默认值：假
 - 类型：布尔值

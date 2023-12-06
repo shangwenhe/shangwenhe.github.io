@@ -1,10 +1,10 @@
-### `description`
+## 描述
 
 npm 将各种东西放在你的计算机上。这就是它的工作。
 
 该文档将告诉您它把什么放在哪里。
 
-#### `tldr`
+## `tl;dr`
 
 - 本地安装（默认）：将内容放入`./node_modules`当前包根目录中。
 - 全局安装（使用`-g`）：将内容放入 /usr/local 或安装节点的任何位置。
@@ -12,13 +12,13 @@ npm 将各种东西放在你的计算机上。这就是它的工作。
 - 如果要在命令行上运行它，请**全局**安装它。
 - 如果您需要两者，则将其安装在两个位置，或使用`npm link`.
 
-#### `prefix-configuration`
+## `prefix-configuration`
 
 该`prefix`配置默认为安装节点的位置。在大多数系统上，这是`/usr/local`. 在 Windows 上，它是`%AppData%\npm`. 在 Unix 系统上，它是上一级，因为节点通常安装在`{prefix}/bin/node`而不是`{prefix}/node.exe`.
 
 设置该`global`标志后，npm 会将内容安装到此前缀中。如果未设置，它将使用当前包的根目录，或者当前工作目录（如果不在包中）。
 
-#### `node-modules`
+## `node-modules`
 
 `node_modules`包被放入`prefix`. 当本地安装时，这意味着您可以`require("packagename")`加载其主模块，或`require("packagename/lib/path/to/sub/module")`加载其他模块。
 
@@ -28,13 +28,13 @@ Unix 系统上的全局安装转到`{prefix}/lib/node_modules`. Windows 上的�
 
 如果您想要`require()`一个软件包，请在本地安装它。
 
-#### `executables`
+## `executables`
 
 `{prefix}/bin`在全局模式下，可执行文件在 Unix 上链接到，或`{prefix}`在 Windows 上直接链接到。确保该路径位于您的终端`PATH`环境中才能运行它们。
 
 在本地模式下，可执行文件被链接到`./node_modules/.bin`，以便它们可以供通过 npm 运行的脚本使用。（例如，这样当您运行时，测试运行程序将位于路径中`npm test`。）
 
-#### `man-pages`
+## `man-pages`
 
 在全局模式下，手册页链接到`{prefix}/share/man`.
 
@@ -42,19 +42,19 @@ Unix 系统上的全局安装转到`{prefix}/lib/node_modules`. Windows 上的�
 
 Windows 系统上未安装手册页。
 
-#### `cache`
+## `cache`
 
 看`npm cache`。缓存文件存储`~/.npm`在 Posix 或`%AppData%/npm-cache`Windows 上。
 
 这是由`cache`配置参数控制的。
 
-#### `temp-files`
+## `temp-files`
 
 临时文件默认存储在`tmp`配置指定的文件夹中，默认为 TMPDIR、TMP 或 TEMP 环境变量，或者`/tmp`在 Unix 和`c:\windows\temp`Windows 上。
 
 每次运行程序时，临时文件都会在此根目录下获得一个唯一的文件夹，并在成功退出后被删除。
 
-### `more-information`
+## `more-information`
 
 在本地安装时，npm 首先尝试找到合适的`prefix`文件夹。这样`npm install foo@1.2.3`即使您碰巧已经进入`cd`了其他文件夹，它也会安装到软件包的合理根目录中。
 
@@ -66,13 +66,13 @@ Windows 系统上未安装手册页。
 
 任何 bin 文件都符号链接到`./node_modules/.bin/`，以便 npm 脚本在必要时可以找到它们。
 
-#### `global-installation`
+## `global-installation`
 
 如果`global`配置设置为 true，则 npm 将“全局”安装软件包。
 
 对于全局安装，软件包的安装方式大致相同，但使用上述文件夹。
 
-#### `cycles-conflicts-and-folder-parsimony`
+## `cycles-conflicts-and-folder-parsimony`
 
 循环是使用节点模块系统的属性来处理的，它会在目录中查找`node_modules`文件夹。因此，在每个阶段，如果包已安装在祖先`node_modules`文件夹中，则它不会安装在当前位置。
 
@@ -82,7 +82,7 @@ Windows 系统上未安装手册页。
 
 另一种优化可以通过在本地化的“目标”文件夹下方的尽可能最高级别安装依赖项来进行。
 
-#### `example`
+## `example`
 
 考虑这个依赖图：
 
@@ -133,7 +133,7 @@ Bar [B] 还依赖于 baz 和 asdf，因此它们安装在 bar 的`node_modules`�
 
 要以图形方式显示安装内容的位置，请使用`npm ls`。
 
-#### `publishing`
+## `publishing`
 
 发布后，npm 将在文件夹中查找`node_modules`。如果数组中没有任何项目`bundledDependencies`，那么它们将不会包含在包 tarball 中。
 

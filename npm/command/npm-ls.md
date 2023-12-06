@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 ```bash
 npm ls [[<@scope>/]<pkg> ...]
@@ -6,7 +6,7 @@ npm ls [[<@scope>/]<pkg> ...]
 aliases: list, la, ll
 ```
 
-### `description`
+## 描述
 
 `--all`此命令将以树结构的形式将已安装的所有软件包版本以及指定的依赖项打印到标准输出。
 
@@ -30,7 +30,7 @@ npm@7.24.2 /path/to/npm
 
 当作为`ll`或运行时`la`，它默认显示扩展信息。
 
-### `note-design-changes-pending`
+## `note-design-changes-pending`
 
 当 npm 创建一个天真地嵌套每个依赖项的文件夹时，该`npm ls`命令的输出和行为变得非常*有意义*。`node_modules`在这种情况下，磁盘上包的逻辑依赖图和物理树将大致相同。
 
@@ -42,16 +42,16 @@ npm@7.24.2 /path/to/npm
 
 目前正在对该命令的用例、意图、行为和输出进行彻底的重新检查。`npm ls`预计npm v8 中的默认人类可读输出至少会发生重大变化。
 
-### `configuration`
+## `configuration`
 
-#### `all`
+## `all`
 
 - 默认值：假
 - 类型：布尔值
 
 运行`npm outdated`和时`npm ls`，设置`--all`将显示所有过时或已安装的软件包，而不仅仅是当前项目直接依赖的软件包。
 
-#### `json`
+## `json`
 
 - 默认值：假
 - 类型：布尔值
@@ -62,21 +62,21 @@ npm@7.24.2 /path/to/npm
 
 并非所有 npm 命令都支持。
 
-#### `long`
+## `long`
 
 - 默认值：假
 - 类型：布尔值
 
 显示`ls`、`search`、 和中的扩展信息`help-search`。
 
-#### `parseable`
+## `parseable`
 
 - 默认值：假
 - 类型：布尔值
 
 写入标准输出的命令输出可解析的结果。对于`npm search`，这将是制表符分隔的表格格式。
 
-#### `global`
+## `global`
 
 - 默认值：假
 - 类型：布尔值
@@ -87,7 +87,7 @@ npm@7.24.2 /path/to/npm
 - bin 文件链接到`{prefix}/bin`
 - 手册页链接到`{prefix}/share/man`
 
-#### `depth`
+## `depth`
 
 - 默认值：`Infinity`如果`--all`设置，否则`1`
 - 类型：空或数字
@@ -96,7 +96,7 @@ npm@7.24.2 /path/to/npm
 
 如果未设置，`npm ls`将仅显示根项目的直接依赖项。如果`--all`设置了，npm 将默认显示所有依赖项。
 
-#### `omit`
+## `omit`
 
 - 默认值：如果`NODE_ENV`环境变量设置为“生产”，则为“dev”，否则为空。
 - 类型：“dev”、“可选”或“peer”（可以设置多次）
@@ -109,14 +109,14 @@ npm@7.24.2 /path/to/npm
 
 如果生成的省略列表包含`'dev'`，则所有生命周期脚本的`NODE_ENV`环境变量将设置为。`'production'`
 
-#### `link`
+## `link`
 
 - 默认值：假
 - 类型：布尔值
 
 与 一起使用`npm ls`，将输出限制为仅那些链接的包。
 
-#### `package-lock-only`
+## `package-lock-only`
 
 - 默认值：假
 - 类型：布尔值
@@ -127,14 +127,14 @@ npm@7.24.2 /path/to/npm
 
 这意味着`list`输出将基于 描述的树`package-lock.json`，而不是 的内容`node_modules`。
 
-#### `unicode`
+## `unicode`
 
 - `LC_ALL`默认值：在 Windows 上为 false，在具有 unicode 语言环境的 mac/unix 系统上为 true，由、`LC_CTYPE`或环境变量定义`LANG`。
 - 类型：布尔值
 
 当设置为 true 时，npm 在树输出中使用 unicode 字符。当为 false 时，它使用 ascii 字符而不是 unicode 字形。
 
-#### `workspace`
+## `workspace`
 
 - 默认：
 - 类型：String（可设置多次）
@@ -151,7 +151,7 @@ npm@7.24.2 /path/to/npm
 
 该值不会导出到子进程的环境中。
 
-#### `workspaces`
+## `workspaces`
 
 - 默认值：假
 - 类型：布尔值

@@ -1,4 +1,4 @@
-### `description`
+## 描述
 
 `npm-shrinkwrap.json`是由 . 创建的文件`npm shrinkwrap`。它与 相同`package-lock.json`，但有一个主要警告：与 不同`package-lock.json`，`npm-shrinkwrap.json`发布包时可能会包含 。
 

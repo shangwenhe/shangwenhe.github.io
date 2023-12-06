@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 ```bash
 npm whoami [--registry <registry>]
@@ -6,7 +6,7 @@ npm whoami [--registry <registry>]
 
 Note: This command is unaware of workspaces.
 
-### `description`
+## 描述
 
 Display the npm username of the currently logged-in user.
 
@@ -14,9 +14,9 @@ If logged into a registry that provides token-based authentication, then connect
 
 If logged into a registry that uses Basic Auth, then simply print the `username` portion of the authentication string.
 
-### `configuration`
+## `configuration`
 
-#### `registry`
+## `registry`
 
 - Default: "https://registry.npmjs.org/"
 - Type: URL

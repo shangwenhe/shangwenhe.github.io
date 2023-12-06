@@ -1,12 +1,12 @@
-### `概要`
+## 概要
 
 ```bash
 npm pack [[<@scope>/]<pkg>...] [--dry-run] [--json]
 ```
 
-### `configuration`
+## `configuration`
 
-#### `dry-run`
+## `dry-run`
 
 - Default: false
 - Type: Boolean
@@ -15,7 +15,7 @@ npm pack [[<@scope>/]<pkg>...] [--dry-run] [--json]
 
 注意：其他网络相关命令不支持这一点，例如`dist-tags`、`owner`等。
 
-#### `json`
+## `json`
 
 - Default: false
 - Type: Boolean
@@ -26,14 +26,14 @@ npm pack [[<@scope>/]<pkg>...] [--dry-run] [--json]
 
 并非所有 npm 命令都支持。
 
-#### `pack-destination`
+## `pack-destination`
 
 - Default: "."
 - Type: String
 
 将保存 tarball 的目录`npm pack`。
 
-#### `workspace`
+## `workspace`
 
 - 默认：
 - 类型：String（可设置多次）
@@ -50,7 +50,7 @@ npm pack [[<@scope>/]<pkg>...] [--dry-run] [--json]
 
 该值不会导出到子进程的环境中。
 
-#### `workspaces`
+## `workspaces`
 
 - 默认值：假
 - 类型：布尔值
@@ -59,7 +59,7 @@ npm pack [[<@scope>/]<pkg>...] [--dry-run] [--json]
 
 该值不会导出到子进程的环境中。
 
-### `description`
+## 描述
 
 对于任何可安装的内容（即包文件夹、tarball、tarball url、git url、name@tag、name@version、name 或作用域名称），此命令会将其提取到缓存，将 tarball 复制到当前工作目录为`<name>-<version>.tgz`，然后将文件名写入 stdout。
 

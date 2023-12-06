@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 ```bash
 npm exec -- <pkg>[@<version>] [args...]
@@ -19,7 +19,7 @@ alias: npm x, npx
 
 ```
 
-### `description`
+## 描述
 
 此命令允许您从 npm 包（本地安装或远程获取）运行任意命令，其上下文与通过`npm run`.
 
@@ -37,7 +37,7 @@ alias: npm x, npx
 
 要运行指定二进制文件*以外的*二进制文件，请指定一个或多个`--package`选项，这将阻止 npm 从第一个命令参数推断包。
 
-### `npx-vs-npm-exec`
+## `npx-vs-npm-exec`
 
 当通过`npx`二进制文件运行时，所有标志和选项*必须*在任何位置参数之前设置。当通过 运行时`npm exec`，双连字符`--`标志可用于抑制 npm 对应发送到执行命令的开关和选项的解析。
 
@@ -73,7 +73,7 @@ $ foo@latest bar
 $ npm exec -- foo@latest bar --package=@npmcli/foo
 ```
 
-### `examples`
+## `examples`
 
 `tap`使用提供的参数运行本地依赖项中的版本：
 
@@ -97,7 +97,7 @@ $ npm x -c 'eslint && say "hooray, lint passed"'
 $ npx -c 'eslint && say "hooray, lint passed"'
 ```
 
-### `compatibility-with-older-npx-versions`
+## `compatibility-with-older-npx-versions`
 
 该`npx`二进制文件在 npm v7.0.0 中被重写，并且独立`npx`包当时已被弃用。`npx`使用该`npm exec`命令而不是单独的参数解析器和安装过程，并提供一些功能来保持与其在先前版本中接受的参数的向后兼容性。
 

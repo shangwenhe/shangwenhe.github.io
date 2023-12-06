@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 
 
@@ -6,11 +6,11 @@
 npm <command> [args]
 ```
 
-### `version`
+## `version`
 
 7.24.2
 
-### `description`
+## 描述
 
 npm 是 Node JavaScript 平台的包管理器。它将模块放置到位，以便节点可以找到它们，并智能地管理依赖冲突。
 
@@ -18,13 +18,13 @@ npm 是 Node JavaScript 平台的包管理器。它将模块放置到位，以�
 
 运行`npm help`以获取可用命令的列表。
 
-### `important`
+## `important`
 
 [默认情况下，npm 已预先配置为使用https://registry.npmjs.org](https://registry.npmjs.org/)上的 npm 公共注册表。使用 npm 公共注册表须遵守https://docs.npmjs.com/policies/terms上提供的使用条款。
 
 您可以将 npm 配置为使用您喜欢的任何兼容注册表，甚至运行您自己的注册表。使用他人的注册表受其使用条款的约束。
 
-### `introduction`
+## `introduction`
 
 你可能因为想要安装东西而使用了 npm。
 
@@ -34,13 +34,13 @@ npm 是 Node JavaScript 平台的包管理器。它将模块放置到位，以�
 
 使用该`npm search`命令显示公共注册表中可用的所有内容。用于`npm ls`显示您已安装的所有内容。
 
-### `dependencies`
+## `dependencies`
 
 如果包使用 git URL 列出依赖项，npm 将使用该`git`命令安装该依赖项，如果未安装，则会生成错误。
 
 如果 npm 尝试安装的包之一是本机节点模块并且需要编译 C++ 代码，则 npm 将使用[node-gyp](https://github.com/nodejs/node-gyp)来完成该任务。对于 Unix 系统，[node-gyp](https://github.com/nodejs/node-gyp)需要 Python、make 和像 GCC 这样的构建链。在 Windows 上，需要 Python 和 Microsoft Visual Studio C++。有关更多信息，请访问[node-gyp 存储库](https://github.com/nodejs/node-gyp)和[node-gyp Wiki](https://github.com/nodejs/node-gyp/wiki)。
 
-### `directories`
+## `directories`
 
 请参阅`folders`以了解 npm 将内容放在哪里。
 
@@ -51,7 +51,7 @@ npm 是 Node JavaScript 平台的包管理器。它将模块放置到位，以�
 
 本地模式是默认模式。在任何命令上使用`-g`或`--global`即可改为在全局模式下运行。
 
-### `developer-usage`
+## `developer-usage`
 
 如果您使用 npm 开发和发布代码，请查看以下帮助主题：
 
@@ -61,7 +61,7 @@ npm 是 Node JavaScript 平台的包管理器。它将模块放置到位，以�
 - adduser：创建帐户或登录。当您执行此操作时，npm 会将凭据存储在用户配置文件中。
 - 发布：使用该`npm publish`命令将代码上传到注册表。
 
-#### `configuration`
+## `configuration`
 
 npm 的可配置性非常强。它从 5 个位置读取其配置选项。
 
@@ -73,13 +73,13 @@ npm 的可配置性非常强。它从 5 个位置读取其配置选项。
 
 请参阅`config`参考资料 了解更多信息。
 
-### `contributions`
+## `contributions`
 
 欢迎补丁！
 
 如果您想提供帮助，但不知道该做什么，请阅读[贡献指南](https://github.com/npm/cli/blob/latest/CONTRIBUTING.md)并检查问题列表。
 
-### `bugs`
+## `bugs`
 
 当您发现问题时，请报告它们：https://github.com/npm/cli/issues
 

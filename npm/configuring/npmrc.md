@@ -1,4 +1,4 @@
-### `description`
+## 描述
 
 npm 从命令行、环境变量和`npmrc`文件获取其配置设置。
 
@@ -6,7 +6,7 @@ npm 从命令行、环境变量和`npmrc`文件获取其配置设置。
 
 有关可用配置选项的列表，请参阅[config](https://docs.npmjs.com/cli/v7/using-npm/config)。
 
-### `files`
+## `files`
 
 四个相关文件是：
 
@@ -30,7 +30,7 @@ key[] = "first value"
 key[] = "second value"
 ```
 
-#### `comments`
+## `comments`
 
 文件中的行以 或字符`.npmrc`开头时被解释为注释。[文件由npm/ini](https://github.com/npm/ini)解析，它指定了此注释语法。`;``#``.npmrc`
 
@@ -42,7 +42,7 @@ key[] = "second value"
 @myscope:registry=https://mycustomregistry.example.org
 ```
 
-#### `per-project-config-file`
+## `per-project-config-file`
 
 当在项目中本地工作时，`.npmrc`项目根目录中的文件（即 和 的同级文件`node_modules`）`package.json`将设置特定于该项目的配置值。
 
@@ -50,15 +50,15 @@ key[] = "second value"
 
 此外，在全局模式下（例如运行时）不会读取此文件`npm install -g`。
 
-#### `per-user-config-file`
+## `per-user-config-file`
 
 `$HOME/.npmrc`（或`userconfig`参数，如果在环境或命令行中设置）
 
-#### `global-config-file`
+## `global-config-file`
 
 `$PREFIX/etc/npmrc`（或`globalconfig`参数，如果在上面设置）：此文件是 ini 文件格式的`key = value`参数列表。环境变量可以如上替换。
 
-#### `built-in-config-file`
+## `built-in-config-file`
 
 ```
 path/to/npm/itself/npmrc
@@ -74,10 +74,6 @@ path/to/npm/itself/npmrc
 
 ```txt
 sass_binary_site=http://cdn.npm.taobao.org/dist/node-sass
-@rc-embed:registry=http://npm.rongcloud.net
-@rongcloud:registry=http://npm.rongcloud.net
-//npm.rongcloud.net/:_authToken="e/2UW5htWzBEyKzkAIQLbwmBPiZQ99sEIbYicM4Iz1k="
-//registry.npmjs.com/:_authToken=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
 
 registry=https://registry.npm.taobao.org
 disturl=https://npm.taobao.org/dist

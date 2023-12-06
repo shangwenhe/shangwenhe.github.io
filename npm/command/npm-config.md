@@ -1,4 +1,4 @@
-### `概要`
+## 概要
 
 ```bash
 npm config set <key>=<value> [<key>=<value> ...]
@@ -14,7 +14,7 @@ alias: c
 
 注意：此命令不知道工作区。
 
-### `description`
+## 描述
 
 npm 从命令行、环境变量、`npmrc`文件以及某些情况下的`package.json`文件获取其配置设置。
 
@@ -24,11 +24,11 @@ npm 从命令行、环境变量、`npmrc`文件以及某些情况下的`package.
 
 该`npm config`命令可用于更新和编辑用户和全局 npmrc 文件的内容。
 
-### `sub-commands`
+## `sub-commands`
 
 Config支持以下子命令：
 
-#### `set`
+## `set`
 
 ```bash
 npm config set key=value [key=value...]
@@ -41,7 +41,7 @@ npm set key=value [key=value...]
 
 注意：为了向后兼容，`npm config set key value`支持将其作为`npm config set key=value`.
 
-#### `get`
+## `get`
 
 ```bash
 npm config get [key ...]
@@ -54,7 +54,7 @@ npm get [key ...]
 
 如果未提供键，则此命令的行为与 相同`npm config list`。
 
-#### `list`
+## `list`
 
 ```bash
 npm config list
@@ -62,7 +62,7 @@ npm config list
 
 显示所有配置设置。`-l`还用于显示默认值。用于`--json`以 json 格式显示设置。
 
-#### `delete`
+## `delete`
 
 ```bash
 npm config delete key [key ...]
@@ -70,7 +70,7 @@ npm config delete key [key ...]
 
 从所有配置文件中删除指定的键。
 
-#### `edit`
+## `edit`
 
 ```bash
 npm config edit
@@ -78,9 +78,9 @@ npm config edit
 
 在编辑器中打开配置文件。使用该`--global`标志来编辑全局配置。
 
-### `configuration`
+## `configuration`
 
-#### `json`
+## `json`
 
 - Default: false
 - Type: Boolean
@@ -91,7 +91,7 @@ npm config edit
 
 并非所有 npm 命令都支持。
 
-#### `global`
+## `global`
 
 - Default: false
 - Type: Boolean
@@ -102,21 +102,21 @@ npm config edit
 - bin 文件链接到`{prefix}/bin`
 - 手册页链接到`{prefix}/share/man`
 
-#### `editor`
+## `editor`
 
 - 默认值：EDITOR 或 VISUAL 环境变量，或 Windows 上的“notepad.exe”，或 Unix 系统上的“vim”
 - 类型：字符串
 
 `npm edit`为和运行的命令`npm config edit`。
 
-#### `location`
+## `location`
 
 - 默认值：“user”，除非`--global`传递，这也会将此值设置为“global”
 - 类型：“全局”、“用户”或“项目”
 
 当传递给`npm config`它时，它指的是要使用哪个配置文件。
 
-#### `long`
+## `long`
 
 - Default: false
 - Type: Boolean
