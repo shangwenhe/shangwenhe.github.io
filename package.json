@@ -4,7 +4,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "vitepress build && find .vitepress/dist -name '*.html' | xargs -I {} sh -c \"sed -i '' 's/ inert //g' {} \"",
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
