@@ -7,11 +7,22 @@ import { chaters as blogchaters  } from '../chapters/blog-chapters'
 import { chaters as svgchaters  } from '../chapters/svg-chapters'
 import { chaters as npmchaters  } from '../chapters/npm-chapters'
 
-const footer = {
-  message: 'Released under the MIT License.',
-  copyright: 'Copyright © 2023 <a href="mailto:ashang.wenhe@gmail.com">ashang.wenhe@gmail.com</a>'
-}
 
+const friendLink = [
+  {
+    href: 'https://www.yanlingxinrui.com',
+    title: '研发解决方案',
+  },
+  {
+    href: 'https://cloud.yanlingxinrui.com',
+    title: '互助平台',
+  }
+]
+
+const footer = {
+  message: '友情链接: ' + friendLink.map(item => `<a href="${item.href}" target="_blank">${item.title}</a>`).join(' • '),
+  copyright: 'Released under the MIT License.<br/>Copyright © 2023 <a href="mailto:ashang.wenhe@gmail.com">ashang.wenhe@gmail.com</a>'
+}
 
 const nav = [
   { text: 'TypeScript', link: '/ts/intro.html' },
