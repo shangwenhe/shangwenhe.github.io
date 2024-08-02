@@ -11,7 +11,8 @@ export const chaters = [
       { text: "ps", link: "/bash/archives/commands/ps.html" },
       { text: "scp", link: "/bash/archives/commands/scp.html" },
       { text: "xargs", link: "/bash/archives/commands/xargs.html" },
-    ]
+      { text: "截取内容", link: "/bash/advanced-example.md" },
+    ],
   },
   {
     text: "基本命令",
@@ -57,10 +58,6 @@ export const chaters = [
       { text: "whereis", link: "/bash/archives/commands/whereis.html" },
       { text: "which", link: "/bash/archives/commands/which.html" },
       { text: "who", link: "/bash/archives/commands/who.html" },
-    ]
-  }
-
-
-
-
-]
+    ],
+  },
+];
